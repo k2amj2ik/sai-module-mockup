@@ -1,0 +1,2342 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>SAI A6 작가 시리즈 카드 · 50인 후보 데이터셋 (2026-06-02)</title>
+<style>
+* { box-sizing: border-box; }
+body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif; background:#f8fafc; color:#0f172a; line-height:1.5; }
+.container { max-width:1280px; margin:0 auto; padding:32px 24px 80px; }
+.page-header { background:#fff; border-radius:16px; padding:28px 32px; margin-bottom:24px; box-shadow:0 1px 3px rgba(0,0,0,0.05); }
+.page-title { font-size:24px; font-weight:700; margin:0 0 8px; }
+.page-sub { color:#475569; font-size:14px; margin:0; }
+.page-back { display:inline-block; color:#6366f1; text-decoration:none; font-size:13px; margin-top:12px; }
+.page-back:hover { text-decoration:underline; }
+
+.summary { background:#fff; border-radius:12px; padding:20px 24px; margin-bottom:32px; box-shadow:0 1px 3px rgba(0,0,0,0.05); }
+.summary-title { font-size:15px; font-weight:600; margin:0 0 12px; color:#334155; }
+.summary-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-bottom:14px; }
+.stat-box { padding:12px 14px; border-radius:8px; background:#f1f5f9; }
+.stat-box .lbl { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:0.5px; }
+.stat-box .val { font-size:22px; font-weight:700; margin-top:4px; }
+.stat-A .val { color:#10b981; }
+.stat-B .val { color:#f59e0b; }
+.stat-C .val { color:#94a3b8; }
+.summary-note { color:#475569; font-size:13px; line-height:1.7; }
+.summary-note ul { margin:4px 0 0 18px; padding:0; }
+.summary-note code { background:#e2e8f0; padding:1px 6px; border-radius:4px; font-size:12px; }
+
+.usage-box { background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:18px 22px; margin-bottom:24px; }
+.usage-box h3 { margin:0 0 10px; font-size:14px; color:#1e40af; }
+.usage-box p { margin:0 0 8px; font-size:13px; color:#1e3a8a; }
+.usage-box .example { background:#fff; border-radius:8px; padding:10px 12px; margin-top:8px; font-size:13px; color:#0f172a; }
+
+.grade-section { margin-bottom:36px; }
+.grade-title { font-size:18px; font-weight:700; margin:0 0 8px; display:flex; align-items:center; gap:10px; }
+.grade-pill { display:inline-block; padding:3px 10px; border-radius:999px; font-size:12px; color:#fff; font-weight:600; }
+.grade-desc { color:#64748b; font-size:13px; margin:0 0 16px; }
+
+.artist-card { background:#fff; border-radius:12px; margin-bottom:14px; box-shadow:0 1px 3px rgba(0,0,0,0.05); overflow:hidden; }
+.artist-header { display:flex; gap:14px; align-items:center; padding:14px 18px; border-left:4px solid #ddd; background:#fafbfc; }
+.artist-grade { display:inline-block; padding:3px 10px; border-radius:6px; font-size:11px; color:#fff; font-weight:600; flex-shrink:0; }
+.artist-meta { flex:1; min-width:0; }
+.artist-name { font-size:15px; }
+.artist-name-ko { font-weight:700; font-size:17px; }
+.artist-name-en { color:#475569; margin-left:6px; }
+.artist-nation { color:#94a3b8; font-size:13px; }
+.artist-stat { font-size:12px; color:#64748b; margin-top:2px; }
+.artist-stat .dot { margin:0 4px; color:#cbd5e1; }
+.artist-note { margin:0 18px 0; padding:8px 12px; background:#fef3c7; border-radius:6px; font-size:12px; color:#92400e; }
+
+.series-strip { display:flex; gap:12px; overflow-x:auto; padding:14px 18px 18px; scroll-snap-type:x mandatory; }
+.series-strip::-webkit-scrollbar { height:8px; }
+.series-strip::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:4px; }
+
+.minicard { flex:0 0 auto; width:280px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; overflow:hidden; scroll-snap-align:start; display:flex; flex-direction:column; }
+.thumb { width:100%; height:120px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #e2e8f0; }
+.thumb-init { font-size:32px; font-weight:700; color:#475569; opacity:0.55; letter-spacing:1px; }
+.mc-body { padding:12px 14px; flex:1; display:flex; flex-direction:column; gap:6px; }
+.mc-name { font-size:14px; font-weight:700; color:#0f172a; line-height:1.3; }
+.mc-name-ko { font-size:12px; color:#64748b; }
+.mc-trait { font-size:12px; color:#334155; line-height:1.55; margin-top:2px; }
+.mc-meta { margin-top:4px; }
+.mc-match { display:inline-block; background:#eff6ff; color:#1d4ed8; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+.mc-phases, .mc-source, .mc-note { font-size:11px; color:#64748b; line-height:1.5; margin-top:4px; padding-top:6px; border-top:1px dashed #e2e8f0; }
+.mc-phases b, .mc-source b { color:#334155; font-weight:600; }
+.mc-note { color:#b45309; background:#fef3c7; padding:6px 8px; border-radius:4px; border:none; }
+
+.c-section { background:#fff; border-radius:12px; padding:20px 24px; margin-top:24px; box-shadow:0 1px 3px rgba(0,0,0,0.05); }
+.c-section h3 { font-size:15px; margin:0 0 12px; color:#334155; }
+.c-section ul { margin:0; padding-left:20px; font-size:13px; color:#475569; }
+.c-section li { margin-bottom:6px; line-height:1.6; }
+.c-section li b { color:#0f172a; }
+
+footer { text-align:center; padding:24px 0 8px; color:#94a3b8; font-size:12px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="page-header">
+  <h1 class="page-title">A6 작가 시리즈 카드 · 50인 후보 데이터셋</h1>
+  <p class="page-sub">인기 작가 50인의 공식 시리즈 보유 여부 + SAB 거래 데이터 텍스트 매칭 검증 결과. 작가 정보 답변(1번) 안에서 "이 작가의 시리즈" 목록을 미니 카드로 보여주기 위한 데이터셋.</p>
+  <a class="page-back" href="SAI_답변모듈_목업_20260528.html#m-A6">← A6 답변모듈 목업으로 돌아가기</a>
+</div>
+
+<div class="usage-box">
+  <h3>운용 방식</h3>
+  <p><b>작가 답변 화면(A1·A2 모듈 하단)</b>에서 "이 작가의 시리즈" 영역을 가로 캐러셀로 노출. 카드 1개 = 시리즈 1개. 카드 클릭 → A6 단독 시리즈 카드 답변으로 전환(시기 구분 + 시기별 미리보기 + 시리즈 전체 작품 M2 호출).</p>
+  <div class="example"><b>예시 답변 흐름:</b> "이우환에 대해 알려줘" → 작가 답변(A1/A2) + 하단 <b>"이우환의 시리즈"</b> 캐러셀에 8개 미니 카드 (From Point · From Line · From Winds · Correspondence · Dialogue · Relatum · From Brush · A Cut Shot) → 사용자가 "From Point" 카드 탭 → A6 시리즈 답변 화면</div>
+</div>
+
+<div class="summary">
+  <div class="summary-title">50인 시리즈 카드 적합도 요약</div>
+  <div class="summary-grid">
+    <div class="stat-box stat-A"><div class="lbl">A 등급 (즉시 적용)</div><div class="val">18명</div></div>
+    <div class="stat-box stat-B"><div class="lbl">B 등급 (큐레이터 검토)</div><div class="val">13명</div></div>
+    <div class="stat-box stat-C"><div class="lbl">C 등급 (시리즈 분류 불가)</div><div class="val">19명</div></div>
+    <div class="stat-box"><div class="lbl">총합</div><div class="val">50명</div></div>
+  </div>
+  <div class="summary-note">
+    <ul>
+      <li><b>A 등급</b> — 작가 공식 / 미술관·재단 / 메이저 경매사 lot description으로 시리즈명 학술 정착 + SAB DB <code>title</code> 텍스트 매칭으로 작품 자동 분류 가능. 별도 <code>series</code> 테이블 없이도 1차 적용 가능.</li>
+      <li><b>B 등급</b> — 작가 공식 시리즈는 있으나 SAB 거래 표본 매칭이 약하거나 (모두 <code>Untitled</code> 등), 큐레이터 작품-시리즈 매핑 사전이 별도로 필요한 작가.</li>
+      <li><b>C 등급</b> — 작가가 명명한 시리즈가 없거나(모티프·주제는 일관되나 시리즈명 부재), SAB 거래 표본이 너무 적은 작가. A6 미사용·M2(전체 작품) 폴백.</li>
+      <li><b>표기 룰 정합</b> — 카탈로그 §AA-1148 영문 원제 표기 기본. 한글 표기는 작가 공식·미술관·정착 학술 표기 확인된 경우에만 병기. 임의 의역 금지.</li>
+      <li><b>시기 구분(<code>period_phases</code>)</b>은 큐레이터 정의가 1순위. 본 데이터셋은 학술/미술관 도록 정착된 시기만 표기. 미정의 시리즈는 단일 기간만 표기.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="grade-section">
+  <h2 class="grade-title"><span class="grade-pill" style="background:#10b981">A</span>등급 · 18명 — 즉시 적용 가능</h2>
+  <p class="grade-desc">작가 공식 시리즈 정착 + SAB title 텍스트 매칭으로 자동 분류 가능. 별도 큐레이터 사전 없이 1차 적용 가능 (정확도 점진 보정).</p>
+  <section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">앤디 워홀</span>
+        <span class="artist-name-en">(Andy Warhol)</span>
+        <span class="artist-nation">· United States</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>834</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>11</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>186</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">MA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Marilyn</div>
+    <div class="mc-name-ko">마릴린 · 1962–1967</div>
+    <div class="mc-trait">실크스크린 셀러브리티·반복·죽음·이미지</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 27건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관(피츠버그) · MoMA · Christie&#x27;s</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">CA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Campbell&#x27;s Soup Cans</div>
+    <div class="mc-name-ko">캠벨 수프 캔 · 1962–1969</div>
+    <div class="mc-trait">대량생산 상품·팝아트 출발·32종 통조림</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 49건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> MoMA · 앤디워홀미술관</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">FL</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Flowers</div>
+    <div class="mc-name-ko">플라워스 · 1964–1970</div>
+    <div class="mc-trait">히비스커스 4송이 반복·대량 색상 변주</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 17건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관 · MoMA</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">EL</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Electric Chair</div>
+    <div class="mc-name-ko">전기의자 · 1964–1971</div>
+    <div class="mc-trait">죽음과 재앙·반복적 이미지의 무감각화</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 10건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관 · Tate Modern</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#cffafe">
+    <div class="thumb-init">MA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Mao</div>
+    <div class="mc-name-ko">마오 · 1972–1973</div>
+    <div class="mc-trait">마오쩌둥 초상·정치적 아이콘·다채로운 색상</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 23건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> MoMA · Art Institute of Chicago</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dbeafe">
+    <div class="thumb-init">CO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Cow</div>
+    <div class="mc-name-ko">카우 · 1966–1976</div>
+    <div class="mc-trait">소 이미지·벽지 작품·대중적 동물 아이콘</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 9건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#e0e7ff">
+    <div class="thumb-init">DO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Dollar Sign ($)</div>
+    <div class="mc-name-ko">달러 사인 · 1981–1982</div>
+    <div class="mc-trait">돈 자체를 작품으로·자본주의 풍자</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 4건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관 · Gagosian</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#ede9fe">
+    <div class="thumb-init">EN</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Endangered Species</div>
+    <div class="mc-name-ko">멸종위기종 · 1983</div>
+    <div class="mc-trait">10종 멸종위기 동물 포트폴리오·환경 의식</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 8건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관 · Feldman &amp; Schellmann 카탈로그</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fae8ff">
+    <div class="thumb-init">MY</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Myths</div>
+    <div class="mc-name-ko">신화 · 1981</div>
+    <div class="mc-trait">미국 신화적 캐릭터(미키마우스·산타클로스 등) 10종</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 22건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관 · Feldman &amp; Schellmann</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fce7f3">
+    <div class="thumb-init">MI</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Mick Jagger</div>
+    <div class="mc-name-ko">믹 재거 · 1975</div>
+    <div class="mc-trait">롤링스톤스 보컬·셀러브리티 초상 10종 포트폴리오</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 9건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관 · Feldman &amp; Schellmann</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#ffe4e6">
+    <div class="thumb-init">IN</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Ingrid Bergman</div>
+    <div class="mc-name-ko">잉그리드 버그만 · 1983</div>
+    <div class="mc-trait">여배우 3인 초상(With Hat·The Nun·Herself)</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 8건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 앤디워홀미술관</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">타카시 무라카미</span>
+        <span class="artist-name-en">(Takashi Murakami)</span>
+        <span class="artist-nation">· Japan</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>360</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>6</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>167</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">FL</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Flowers / Murakami.Flowers</div>
+    <div class="mc-name-ko">플라워스 · 1995–현재</div>
+    <div class="mc-trait">웃는 꽃 모티프·슈퍼플랫·일본 대중문화</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 90건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Kaikai Kiki Co. · Perrotin · MOCA Los Angeles</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">MR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Mr. DOB</div>
+    <div class="mc-name-ko">DOB · 1993–현재</div>
+    <div class="mc-trait">무라카미 자기 분신 캐릭터·미키마우스 패러디</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 34건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Kaikai Kiki Co. · Perrotin</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">CH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Cherry Blossoms</div>
+    <div class="mc-name-ko">벚꽃 · 2000s–</div>
+    <div class="mc-trait">일본 전통 모티프 + 슈퍼플랫</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 5건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Kaikai Kiki Co. · Gagosian</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">DO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Doraemon</div>
+    <div class="mc-name-ko">도라에몽 · 2017–</div>
+    <div class="mc-trait">후지코 F. 후지오 콜라보·일본 만화 영웅</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 14건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Kaikai Kiki Co.</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#cffafe">
+    <div class="thumb-init">JE</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Jellyfish Eyes</div>
+    <div class="mc-name-ko">해파리 눈 · 2010s–</div>
+    <div class="mc-trait">동명 영화 캐릭터·요괴와 어린이</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 15건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Kaikai Kiki Co.</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dbeafe">
+    <div class="thumb-init">PA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Panda</div>
+    <div class="mc-name-ko">판다 · 2000s–</div>
+    <div class="mc-trait">판다 모티프·DOB와 함께 자주 등장</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 9건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Kaikai Kiki Co.</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">야요이 쿠사마</span>
+        <span class="artist-name-en">(Yayoi Kusama)</span>
+        <span class="artist-nation">· Japan</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>271</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>6</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>139</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">IN</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Infinity Nets</div>
+    <div class="mc-name-ko">인피니티 넷 · 1959–현재</div>
+    <div class="mc-trait">반복적 망 패턴·강박과 무한·뉴욕 데뷔작</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 8건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 야요이 쿠사마 스튜디오 · MoMA · Tate Modern</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">PU</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Pumpkin</div>
+    <div class="mc-name-ko">호박 · 1990s–현재</div>
+    <div class="mc-trait">호박 모티프·노란 도트·자기 분신</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 94건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 야요이 쿠사마 스튜디오 · 나오시마 베네세하우스</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">FL</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Flowers</div>
+    <div class="mc-name-ko">플라워스 · 2000s–현재</div>
+    <div class="mc-trait">강렬한 색채·자연 모티프·환각 표현</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 21건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 야요이 쿠사마 스튜디오 · David Zwirner</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">DO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Dots / Polka Dot</div>
+    <div class="mc-name-ko">도트 · 1960s–현재</div>
+    <div class="mc-trait">도트 강박·자기 소멸·신체와 공간 연속</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 9건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 야요이 쿠사마 스튜디오 · Tate Modern</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#cffafe">
+    <div class="thumb-init">SO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Soft Sculpture</div>
+    <div class="mc-name-ko">소프트 조각 · 1960s–</div>
+    <div class="mc-trait">직물 남성 신체 반복·페미니즘 맥락</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> MoMA · Tate Modern</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dbeafe">
+    <div class="thumb-init">BU</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Butterfly</div>
+    <div class="mc-name-ko">나비 · 1980s–</div>
+    <div class="mc-trait">나비 모티프·환각·자연·시간</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 6건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> David Zwirner · Christie&#x27;s lot description</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">데미안 허스트</span>
+        <span class="artist-name-en">(Damien Hirst)</span>
+        <span class="artist-nation">· United Kingdom</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>350</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>7</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>91</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">SP</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Spin Paintings</div>
+    <div class="mc-name-ko">스핀 페인팅 · 1992–현재</div>
+    <div class="mc-trait">회전판 + 물감 분사·우연성·기계적 추상</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 24건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Damien Hirst Studio · Gagosian</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">BU</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Butterfly</div>
+    <div class="mc-name-ko">버터플라이 · 2000s–</div>
+    <div class="mc-trait">나비 날개 콜라주·아름다움과 죽음</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 17건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Damien Hirst Studio · Tate Modern</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">TH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">The Currency</div>
+    <div class="mc-name-ko">커런시 · 2016 (발표 2021)</div>
+    <div class="mc-trait">10,000점 NFT 연계·실물 vs 디지털 선택</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 14건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> HENI · Damien Hirst Studio</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">TH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">The Empresses</div>
+    <div class="mc-name-ko">여왕들 · 2022</div>
+    <div class="mc-trait">역사 속 여왕 5인(Wu Zetian·Nūr Jahān·Theodora·Suiko·Taytu Betul)</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 24건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> HENI · Damien Hirst Studio</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#cffafe">
+    <div class="thumb-init">FO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Forever</div>
+    <div class="mc-name-ko">포에버 · 2020s</div>
+    <div class="mc-trait">하트·인생·영원의 상징·H8·H7 라인</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 8건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> HENI</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dbeafe">
+    <div class="thumb-init">TH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">The Secrets</div>
+    <div class="mc-name-ko">시크릿 · 2022</div>
+    <div class="mc-trait">꽃·여성·정체성 (Selflessness·Wisdom 등 H14)</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> HENI · Damien Hirst Studio</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#e0e7ff">
+    <div class="thumb-init">PH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Pharmacy / Spots</div>
+    <div class="mc-name-ko">약국·스팟 · 1988–</div>
+    <div class="mc-trait">도트 격자·의학 알약·제약 산업 모티프</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Tate Modern · Gagosian</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">데이비드 호크니</span>
+        <span class="artist-name-en">(David Hockney)</span>
+        <span class="artist-nation">· United Kingdom</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>382</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>6</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>77</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">MO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Moving Focus</div>
+    <div class="mc-name-ko">무빙 포커스 · 1984–1986</div>
+    <div class="mc-trait">판화 시리즈·다중 관점·큐비즘 재해석</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 22건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Tate · Hockney Pictures</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">TH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">The Blue Guitar</div>
+    <div class="mc-name-ko">블루 기타 · 1976–1977</div>
+    <div class="mc-trait">월리스 스티븐스 시 영감·20점 동판화</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 13건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Tate · MoMA · Hockney Pictures</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">A</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">A Bigger Book</div>
+    <div class="mc-name-ko">비거 북 · 2016</div>
+    <div class="mc-trait">Taschen 출판 작품집·아트 에디션 4종</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 12건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Taschen · Hockney Pictures</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">MY</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">My Window</div>
+    <div class="mc-name-ko">마이 윈도우 · 2009–2012</div>
+    <div class="mc-trait">iPad 드로잉·요크셔 자택 창밖 풍경</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 15건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 런던 RA · Taschen</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#cffafe">
+    <div class="thumb-init">MY</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">My Normandy / A Year in Normandie</div>
+    <div class="mc-name-ko">마이 노르망디 · 2019–2021</div>
+    <div class="mc-trait">코로나 시기 노르망디 시골 풍경·iPad</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Hockney Pictures · RA London</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dbeafe">
+    <div class="thumb-init">IL</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Illustrations for Fourteen Poems by C.P. Cavafy</div>
+    <div class="mc-name-ko">카바피 14편 삽화 · 1966–1967</div>
+    <div class="mc-trait">동성애 시인 카바피 시 14편 동판화·동성 친밀감</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 12건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> MoMA · Tate</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">박서보</span>
+        <span class="artist-name-en">(Park Seo-bo)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>72</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>72</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">CR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Écriture</div>
+    <div class="mc-name-ko">묘법 · 1967–2023</div>
+    <div class="mc-trait">연필 반복 선·한지 결·색채 단색조</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 72건</span>
+    </div>
+    <div class="mc-phases"><b>시기 구분:</b> 전기 묘법(1967–1980s, 연필·자전적) / 후기 묘법(1990s–, 한지·색채)</div>
+    <div class="mc-source"><b>출처:</b> 박서보재단·국립현대미술관·Galerie Perrotin·Christie&#x27;s lot description</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">천광영</span>
+        <span class="artist-name-en">(Chun Kwang-Young)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>64</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>63</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">AG</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Aggregation</div>
+    <div class="mc-name-ko">집합 · 1995–현재</div>
+    <div class="mc-trait">삼각 한지 부조 입체 조합·정보화 시대 응축</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 63건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Sundaram Tagore Gallery · 베니스 비엔날레(2022) 한국관</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">이배</span>
+        <span class="artist-name-en">(Lee Bae)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>63</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>2</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>48</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">BR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Brushstroke</div>
+    <div class="mc-name-ko">붓질 · 2018–현재</div>
+    <div class="mc-trait">단일 붓획·먹·한지·서예 정신</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 32건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Perrotin · 베니스 비엔날레(2024) 한국관</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">IS</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Issu du feu</div>
+    <div class="mc-name-ko">불로부터 · 1990s–현재</div>
+    <div class="mc-trait">숯 덩어리·물성·동양적 매체</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 16건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Perrotin · 파리 기메 박물관</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">김창열</span>
+        <span class="artist-name-en">(Kim Tschang-Yeul)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>39</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>2</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>33</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">WA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Waterdrops / Gouttes d&#x27;eau</div>
+    <div class="mc-name-ko">물방울 · 1972–2021</div>
+    <div class="mc-trait">단일 물방울 극사실·캔버스 표면 위 응결</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 15건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 김창열미술관(제주) · 갤러리현대 · 파리 시립 미술관</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">RE</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Recurrence</div>
+    <div class="mc-name-ko">회귀 · 1980s–2010s</div>
+    <div class="mc-trait">한자 천자문 배경 + 물방울·동양 글자 정체성</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 18건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 김창열미술관 · 갤러리현대 회고전 도록</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">하종현</span>
+        <span class="artist-name-en">(Ha Chong-Hyun)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>40</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>32</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">CO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Conjunction</div>
+    <div class="mc-name-ko">접합 · 1974–현재</div>
+    <div class="mc-trait">마대 뒤에서 물감 밀어내기·배압법 기법</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 32건</span>
+    </div>
+    <div class="mc-phases"><b>시기 구분:</b> 초기(1974–1980s, 마대 표면) / 중기·후기(1990s–, 색채 확장)</div>
+    <div class="mc-source"><b>출처:</b> 국립현대미술관 회고전 도록 · Kukje Gallery · Tina Kim Gallery</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">이우환</span>
+        <span class="artist-name-en">(Lee Ufan)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>62</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>8</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>31</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">FR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">From Point</div>
+    <div class="mc-name-ko">점에서 · 1973–1985</div>
+    <div class="mc-trait">한 획의 점 반복·여백·동양 미학</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Lee Ufan Foundation · MoMA · Pace Gallery</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">FR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">From Line</div>
+    <div class="mc-name-ko">선에서 · 1974–1985</div>
+    <div class="mc-trait">상하 수직 선·필압의 시간성</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 7건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Lee Ufan Foundation · 국립현대미술관</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">FR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">From Winds / East Winds</div>
+    <div class="mc-name-ko">바람에서 · 1982–1986</div>
+    <div class="mc-trait">여러 방향 빠른 필치·자유 운동</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Lee Ufan Foundation · 도쿄 국립근대미술관</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">CO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Correspondence</div>
+    <div class="mc-name-ko">조응 · 1992–2005</div>
+    <div class="mc-trait">여백 위 한두 점의 색면·정적 대화</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 6건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Lee Ufan Foundation · 베르사유 전시 도록</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#cffafe">
+    <div class="thumb-init">DI</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Dialogue</div>
+    <div class="mc-name-ko">대화 · 2006–현재</div>
+    <div class="mc-trait">단일 색면·붓 흔적·만남의 순간</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 6건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Lee Ufan Foundation · Pace Gallery</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dbeafe">
+    <div class="thumb-init">RE</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Relatum</div>
+    <div class="mc-name-ko">관계항 · 1968–현재</div>
+    <div class="mc-trait">돌과 철판 등 사물의 관계·모노하 대표</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Lee Ufan Foundation · 모노하 학술 문헌</div>
+    <div class="mc-note">⚠ 주로 조각/설치 — 평면/판화 SAB 매칭은 제한적</div>
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#e0e7ff">
+    <div class="thumb-init">FR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">From Brush</div>
+    <div class="mc-name-ko">붓에서 · 1976–1981</div>
+    <div class="mc-trait">거대한 한 획·물성과 시간</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Lee Ufan Foundation · Tate Modern</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#ede9fe">
+    <div class="thumb-init">A</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">A Cut Shot</div>
+    <div class="mc-name-ko">컷숏 · 1970s–</div>
+    <div class="mc-trait">판화 시리즈·단편적 순간</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> SAB lot description 정착 표기</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">요시토모 나라</span>
+        <span class="artist-name-en">(Yoshitomo Nara)</span>
+        <span class="artist-nation">· Japan</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>138</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>4</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>23</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">CO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Cosmic Girls</div>
+    <div class="mc-name-ko">코스믹 걸 · 2008–</div>
+    <div class="mc-trait">큰 눈 소녀·우주적 응시·고독</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 6건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Yoshitomo Nara Foundation · Pace Gallery</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">BA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Banging the Drum</div>
+    <div class="mc-name-ko">드럼 치는 아이 · 2010s</div>
+    <div class="mc-trait">북 치는 어린이·전시 포스터 시리즈</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 5건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Pace Gallery · 요코하마미술관</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">AO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Aomori-ken</div>
+    <div class="mc-name-ko">아오모리 개 · 2005–</div>
+    <div class="mc-trait">거대 흰 개 조각·작가 고향 아오모리 상징</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 7건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Aomori Museum of Art</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">MA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Marching on a Butterbur Leaf</div>
+    <div class="mc-name-ko">머위 잎 행진 · 2014</div>
+    <div class="mc-trait">머위잎 위 행진·일본 동화적 모티프</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 5건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Pace Gallery</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">이강소</span>
+        <span class="artist-name-en">(Lee Kang So)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>35</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>4</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>20</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">FR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">From an Island</div>
+    <div class="mc-name-ko">섬에서 · 1990s–현재</div>
+    <div class="mc-trait">서울 시기·붓 자국·동양 회화 정신</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 16건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 국립현대미술관 · Lehmann Maupin</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">FR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">From a River</div>
+    <div class="mc-name-ko">강에서 · 1990s</div>
+    <div class="mc-trait">From an Island의 자매·물의 흐름</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Lehmann Maupin</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">EM</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Emptiness / 허(虛)</div>
+    <div class="mc-name-ko">허(虛) · 2000s–</div>
+    <div class="mc-trait">도자 + 회화·동양 사상의 비움</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 갤러리현대</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">SE</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Serenity / 청명</div>
+    <div class="mc-name-ko">청명 · 2010s–</div>
+    <div class="mc-trait">여백·정적·맑은 정신</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 갤러리현대</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">김태호</span>
+        <span class="artist-name-en">(Kim Tae Ho)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>23</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>2</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>19</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">IN</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Internal Rhythm</div>
+    <div class="mc-name-ko">내재율 · 1990s–현재</div>
+    <div class="mc-trait">격자 누층 두께·표면 깎아내기·기하 추상</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 16건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 갤러리현대 · 박여숙화랑</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">FO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Form</div>
+    <div class="mc-name-ko">형태 · 1980s</div>
+    <div class="mc-trait">초기 형태 탐색·이후 Internal Rhythm으로 발전</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> SAB lot description 정착 표기</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">이건용</span>
+        <span class="artist-name-en">(Lee KunYong)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>19</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>2</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>17</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">BO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Bodyscape</div>
+    <div class="mc-name-ko">신체드로잉 · 1976–현재</div>
+    <div class="mc-trait">몸이 닿는 한계·신체 흔적·행위 미술</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 11건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 국립현대미술관 · 갤러리현대</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">TH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">The Method of Drawing</div>
+    <div class="mc-name-ko">그리는 행위 · 1976–현재</div>
+    <div class="mc-trait">Bodyscape의 자매·드로잉 행위 자체를 작품화</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 6건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 국립현대미술관 · 갤러리현대</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">김환기</span>
+        <span class="artist-name-en">(Kim Whanki)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>31</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>3</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>12</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">DO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Dot Paintings (date-code)</div>
+    <div class="mc-name-ko">점화(날짜코드) · 1968–1974</div>
+    <div class="mc-trait">뉴욕 시기·점의 무수한 반복·우주적 정서·날짜코드 제목</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 11건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 환기미술관 · 국립현대미술관 · 크리스티 홍콩 lot description</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">UN</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Universe / 우주</div>
+    <div class="mc-name-ko">우주 · 1971</div>
+    <div class="mc-trait">5-IV-71 #200 — 단일 대표작, 국내 미술품 경매 최고가</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 0건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 환기미술관 · 크리스티 홍콩(2019)</div>
+    <div class="mc-note">⚠ 단일작 — 시리즈라기보다 후기 점화의 결정체</div>
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">JA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Jar / Moon Jar</div>
+    <div class="mc-name-ko">항아리/달항아리 · 1950s–1960s</div>
+    <div class="mc-trait">한국 도자기 모티프·서울 시기·구상에서 추상 이행</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 환기미술관</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">앤서니 곰리</span>
+        <span class="artist-name-en">(Antony Gormley)</span>
+        <span class="artist-nation">· United Kingdom</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>40</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>4</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>9</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">ME</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">MEME</div>
+    <div class="mc-name-ko">미메 · 2008–</div>
+    <div class="mc-trait">소형 인체 조각 다수·공간 점유 실험</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Antony Gormley Studio · White Cube</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">DO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">DOMAIN</div>
+    <div class="mc-name-ko">도메인 · 2000s</div>
+    <div class="mc-trait">와이어프레임 인체·내부 공간 가시화</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Antony Gormley Studio</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">BA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">BARE / BELT</div>
+    <div class="mc-name-ko">베어·벨트 · 2010s</div>
+    <div class="mc-trait">MEME 시리즈의 소형 변주·자세별 표현</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Antony Gormley Studio · White Cube</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">BO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">BODY</div>
+    <div class="mc-name-ko">바디 · 1990s–</div>
+    <div class="mc-trait">작가 신체 캐스트 단순화·존재의 자리</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Antony Gormley Studio · Tate</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="A">
+  <header class="artist-header" style="border-left-color:#10b981">
+    <div class="artist-grade" style="background:#10b981">A 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">윤형근</span>
+        <span class="artist-name-en">(Yun Hyong-Keun)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>10</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>6</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">BU</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Burnt Umber &amp; Ultramarine Blue</div>
+    <div class="mc-name-ko">엄버 블루 · 1972–2007</div>
+    <div class="mc-trait">대지(엄버) + 하늘(울트라마린) 두 기둥·번짐·정치적 침묵</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 6건</span>
+    </div>
+    <div class="mc-phases"><b>시기 구분:</b> 초기(1973–1980, 엄버 단색) / 중기(1981–1995, 양색 결합) / 후기(1996–2007, 간결화·한지)</div>
+    <div class="mc-source"><b>출처:</b> 국립현대미술관 회고전(2018) · 베니스 비엔날레(2019) · David Zwirner</div>
+    
+  </div>
+</div>
+  </div>
+</section>
+</div>
+
+<div class="grade-section">
+  <h2 class="grade-title"><span class="grade-pill" style="background:#f59e0b">B</span>등급 · 13명 — 큐레이터 검토 필요</h2>
+  <p class="grade-desc">공식 시리즈는 있으나 SAB 거래 표본의 <code>title</code> 매칭이 약함. 큐레이터가 시리즈 사전 작성 + 작품 매핑 보완 시 적용 가능.</p>
+  <section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">마르크 샤갈</span>
+        <span class="artist-name-en">(Marc Chagall)</span>
+        <span class="artist-nation">· France-Russia</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>521</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>5</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>69</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">DA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Daphnis and Chloe</div>
+    <div class="mc-name-ko">다프니스와 클로에 · 1958–1962</div>
+    <div class="mc-trait">롱고스 그리스 소설 42점 컬러 리소그래프</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 24건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Mourlot 카탈로그 · Christie&#x27;s lot description</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">LA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">La Bible</div>
+    <div class="mc-name-ko">성서 · 1956–1960</div>
+    <div class="mc-trait">구약 성서 105점 동판화·Vollard 위탁</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 18건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Cramer 카탈로그 · MoMA</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">LE</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Le Cirque</div>
+    <div class="mc-name-ko">서커스 · 1967</div>
+    <div class="mc-trait">서커스 38점 리소그래프·평생 모티프의 결정</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 13건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Mourlot 카탈로그</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#dcfce7">
+    <div class="thumb-init">AR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Arabian Nights</div>
+    <div class="mc-name-ko">아라비안 나이트 · 1948</div>
+    <div class="mc-trait">아라비안 나이트 13점 컬러 리소그래프·미국 망명기</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 11건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Pantheon Books · Christie&#x27;s lot description</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#cffafe">
+    <div class="thumb-init">JE</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Jerusalem Windows</div>
+    <div class="mc-name-ko">예루살렘 스테인드글라스 · 1962</div>
+    <div class="mc-trait">이스라엘 하다사 병원 12창·12지파 모티프</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Hadassah Medical Center</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">알렉스 카츠</span>
+        <span class="artist-name-en">(Alex Katz)</span>
+        <span class="artist-nation">· United States</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>167</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>2</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>15</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">AD</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Ada</div>
+    <div class="mc-name-ko">에이다 · 1957–현재</div>
+    <div class="mc-trait">아내 Ada 초상·평면적 색면·미국 쿨한 우아함</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 11건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 메트로폴리탄 미술관 · Marlborough Gallery</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">DA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Day Lily / Flowers</div>
+    <div class="mc-name-ko">데이 릴리·꽃 · 2010s</div>
+    <div class="mc-trait">풍경·꽃 단순화·대형 색면</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 4건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Marlborough Gallery</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">정상화</span>
+        <span class="artist-name-en">(Chung Sang-Hwa)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>18</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>14</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">GR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Grid (Untitled-date)</div>
+    <div class="mc-name-ko">격자(Untitled-날짜) · 1970s–현재</div>
+    <div class="mc-trait">카오린 마티에르·격자 균열·뜯어내고 메우기 반복</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 14건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 국립현대미술관 · Greene Naftali · Galerie Perrotin</div>
+    <div class="mc-note">⚠ 모든 작품이 Untitled+날짜코드 — 큐레이터 분류 필수</div>
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">조지 콘도</span>
+        <span class="artist-name-en">(George Condo)</span>
+        <span class="artist-nation">· United States</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>81</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>3</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>10</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">IM</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Imaginary Portraits / Heads</div>
+    <div class="mc-name-ko">상상 초상 · 1990s–현재</div>
+    <div class="mc-trait">왜곡된 얼굴·인공 리얼리즘(Artificial Realism) 본인 정의</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 5건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Skarstedt · New Museum</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">AN</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Antipodal Figures / Abstract</div>
+    <div class="mc-name-ko">추상 인물 · 2000s–</div>
+    <div class="mc-trait">대칭 분열 인물·추상 인물화</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 4건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Skarstedt · Hauser &amp; Wirth</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">DR</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Drawing Paintings</div>
+    <div class="mc-name-ko">드로잉 페인팅 · 2010s</div>
+    <div class="mc-trait">드로잉 직접 캔버스화·즉각성</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Skarstedt</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">살바토레 만지오네</span>
+        <span class="artist-name-en">(Salvo)</span>
+        <span class="artist-nation">· Italy</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>31</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>8</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">시</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">시간·계절 풍경 (Mattino·Sera·Inverno)</div>
+    <div class="mc-name-ko">시간·계절 풍경 · 1980s–2010s</div>
+    <div class="mc-trait">하루의 시각·사계절·이탈리아 풍경의 환상화</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 8건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Galleria Norma Mangione · Mazzoleni</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">내고 박생광</span>
+        <span class="artist-name-en">(Park Saengkwang)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>14</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>2</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>5</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">SH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Shamanism</div>
+    <div class="mc-name-ko">무속 · 1980s</div>
+    <div class="mc-trait">한국 무속·강렬한 채색·민화 미감</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 국립현대미술관</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">모</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">모란 / Peony</div>
+    <div class="mc-name-ko">모란 · 1980s</div>
+    <div class="mc-trait">전통 화조·모란도·민화 영향</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 국립현대미술관</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">백남준</span>
+        <span class="artist-name-en">(Nam June Paik)</span>
+        <span class="artist-nation">· South Korea-United States</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>39</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>2</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>4</b>건</span>
+      </div>
+    </div>
+  </header>
+  <div class="artist-note">⚠ 주력은 비디오 설치 — 평면/오브제 거래 표본 적음. 큐레이터 시리즈 사전 필요.</div>
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">BE</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Beuys Vox</div>
+    <div class="mc-name-ko">보이스 복스 · 1990s</div>
+    <div class="mc-trait">조지프 보이스 추모 협업·플럭서스 정신</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Nam June Paik Art Center</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">GA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Galaxy / Martian</div>
+    <div class="mc-name-ko">갤럭시 · 1990s</div>
+    <div class="mc-trait">비디오 조각·우주적 상상</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Nam June Paik Art Center</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">이상범</span>
+        <span class="artist-name-en">(Lee SangBeom)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>5</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>4</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">사</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">사계산수도</div>
+    <div class="mc-name-ko">사계산수도 · 1930s–1970s</div>
+    <div class="mc-trait">봄·여름·가을·겨울 풍경 4폭·청전 양식</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 4건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 국립중앙박물관 · 호암미술관</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">오치균</span>
+        <span class="artist-name-en">(Oh ChiGyun)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>17</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>3</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>3</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">감</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">감 / Persimmons</div>
+    <div class="mc-name-ko">감 · 1990s–현재</div>
+    <div class="mc-trait">한국 감나무·핑거페인팅·고향 정서</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 갤러리현대</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">SA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Santa Fe</div>
+    <div class="mc-name-ko">산타페 · 1990s</div>
+    <div class="mc-trait">미국 뉴멕시코 산타페 풍경·핑거페인팅</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 갤러리현대</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fef3c7">
+    <div class="thumb-init">사</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">사북 / Sabuk</div>
+    <div class="mc-name-ko">사북 · 1990s</div>
+    <div class="mc-trait">강원도 폐광촌·사회적 시선</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 갤러리현대</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">페르난도 보테로</span>
+        <span class="artist-name-en">(Fernando Botero)</span>
+        <span class="artist-nation">· Colombia</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>86</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>2</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>3</b>건</span>
+      </div>
+    </div>
+  </header>
+  <div class="artist-note">⚠ SAB 거래 표본은 주로 개별 인물·정물 — 시리즈 사전 + 작품 매핑 필요</div>
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">BU</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Bullfight (Corrida)</div>
+    <div class="mc-name-ko">투우 · 1980s–현재</div>
+    <div class="mc-trait">투우사·관중·둥근 형태·라틴아메리카 정체성</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Museo Botero · Marlborough Gallery</div>
+    
+  </div>
+</div>
+<div class="minicard">
+  <div class="thumb" style="background:#fee7d3">
+    <div class="thumb-init">LA</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">La Familia</div>
+    <div class="mc-name-ko">가족 · 1970s–</div>
+    <div class="mc-trait">둥근 가족 초상·민속과 부르주아</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 1건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Museo Botero</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">우고 론디논</span>
+        <span class="artist-name-en">(Ugo Rondinone)</span>
+        <span class="artist-nation">· Switzerland</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>83</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>3</b>건</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">MO</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Mountain (date)</div>
+    <div class="mc-name-ko">날짜 풍경 · 1990s–</div>
+    <div class="mc-trait">날짜를 제목으로·우울·시간의 누적</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> Ugo Rondinone Studio · Eva Presenhuber</div>
+    <div class="mc-note">⚠ 서명/제목이 날짜 형식</div>
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">토상봉</span>
+        <span class="artist-name-en">(To Sangbong)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>10</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>3</b>건</span>
+      </div>
+    </div>
+  </header>
+  <div class="artist-note">⚠ 꽃·정물 작품과 풍경 작품 혼재 — 큐레이터 분류 권장</div>
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">CH</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Changdeokgung / Secret Garden</div>
+    <div class="mc-name-ko">창덕궁·비원 · 1970s–1990s</div>
+    <div class="mc-trait">한국 궁궐·전통 정원·구상 풍경</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 3건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> SAB lot description</div>
+    
+  </div>
+</div>
+  </div>
+</section><section class="artist-card" data-grade="B">
+  <header class="artist-header" style="border-left-color:#f59e0b">
+    <div class="artist-grade" style="background:#f59e0b">B 등급</div>
+    <div class="artist-meta">
+      <div class="artist-name">
+        <span class="artist-name-ko">변시지</span>
+        <span class="artist-name-en">(Byun Shi-ji)</span>
+        <span class="artist-nation">· South Korea</span>
+      </div>
+      <div class="artist-stat">
+        <span>거래 표본 unique title <b>27</b>건</span>
+        <span class="dot">·</span>
+        <span>시리즈 <b>1</b>개</span>
+        <span class="dot">·</span>
+        <span>SAB 매칭 누적 <b>2</b>건</span>
+      </div>
+    </div>
+  </header>
+  <div class="artist-note">⚠ 대부분 작품이 제주 풍경이나 개별 제목 — 큐레이터 모티프 분류 권장</div>
+  <div class="series-strip">
+<div class="minicard">
+  <div class="thumb" style="background:#fce7e6">
+    <div class="thumb-init">JE</div>
+  </div>
+  <div class="mc-body">
+    <div class="mc-name">Jeju Landscape</div>
+    <div class="mc-name-ko">제주 풍경 · 1975–2013</div>
+    <div class="mc-trait">귤색 화풍·제주 폭풍과 까마귀·고독한 인물</div>
+    <div class="mc-meta">
+      <span class="mc-match">SAB 매칭 2건</span>
+    </div>
+    
+    <div class="mc-source"><b>출처:</b> 변시지미술관(제주) · 서울미술관</div>
+    
+  </div>
+</div>
+  </div>
+</section>
+</div>
+
+<div class="c-section">
+  <h3>C 등급 · 19명 — 시리즈 카드 미사용 권장 (A6 폴백 → M2 작품 단위)</h3>
+  <ul>
+    <li><b>김기창</b> (Kim Ki-chang, South Korea) — 주제별(학·소·풍속) 산재 — 명명된 시리즈 미정착</li>
+<li><b>김선우</b> (Kim SunWoo, South Korea) — 도도새 캐릭터 작품 다수 — 모티프 카테고리화는 가능 (큐레이터 검토)</li>
+<li><b>김윤신</b> (Kim YunShin, South Korea) — 조각·&quot;합이합일 분이분일&quot; 철학 — 평면 거래 표본 적음</li>
+<li><b>김종학</b> (Kim Chong Hak, South Korea) — 설악산 야생화·풍경 — 모티프 일관되나 시리즈명 미정착</li>
+<li><b>김홍주</b> (Kim Hong-Joo, South Korea) — 대부분 Untitled — SAB 거래 표본 unique title 2건 (너무 적음)</li>
+<li><b>남춘모</b> (Tchun-Mo Nam, South Korea) — Beam·Stroke Line 등 형식 — 시리즈 명명 미약, 표본 적음</li>
+<li><b>문형태</b> (Moon Hyeongtae, South Korea) — 동화적 단일 작품 위주 — 명명 시리즈 없음</li>
+<li><b>박래현</b> (Park ReHyun, South Korea) — 주제별 산재(여인·정물) — 시리즈 미정착</li>
+<li><b>박수근</b> (Park Soo Keun, South Korea) — 가족·여인·아이 등 모티프 일관 — 시리즈명 미명명 (큐레이터 모티프 분류 가능)</li>
+<li><b>아야코 록카쿠</b> (Ayako Rokkaku, Japan) — 대부분 Untitled 어린이 인물 — 명명 시리즈 없음</li>
+<li><b>우국원</b> (Woo KukWon, South Korea) — 단일 메시지 회화·캐릭터 — 시리즈 미정착</li>
+<li><b>유영국</b> (Yoo Youngkuk, South Korea) — 산·풍경 추상 — 모티프 일관, 명명 시리즈 미정착</li>
+<li><b>이대원</b> (Lee Daiwon, South Korea) — 농원·과수원 풍경·점묘 — 모티프 일관, 시리즈 미명명</li>
+<li><b>이왈종</b> (Lee Wal Chong, South Korea) — 제주 생활의 중도 단일 주제 — 시리즈명 자체가 단일</li>
+<li><b>이중섭</b> (Lee JungSeob, South Korea) — 소·가족 모티프 — 시리즈명 미명명, 거래 표본 4건</li>
+<li><b>장욱진</b> (Chang Ucchin, South Korea) — 나무·집·가족·새 모티프 일관 — 시리즈명 미명명 (큐레이터 모티프 분류 가능)</li>
+<li><b>정영주</b> (Joung Young-Ju, South Korea) — 달동네 풍경·종이 콜라주 — 모티프 일관, 시리즈명 미명명</li>
+<li><b>천경자</b> (Chun Kyung-ja, South Korea) — 여인·이국 풍경 등 산재 — 시리즈명 미명명</li>
+<li><b>최용욱</b> (Choi YongWook, South Korea) — 단일 메시지 회화 — 시리즈 미정착</li>
+  </ul>
+</div>
+
+<footer>
+  생성일 2026-06-02 · 데이터 소스: <code>99.기타/05.테스트용데이터/03.인기작가50인_경매기록/</code> · 시리즈 출처는 각 카드의 "출처" 라인 참조
+</footer>
+
+</div>
+</body>
+</html>

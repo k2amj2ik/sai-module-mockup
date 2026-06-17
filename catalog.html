@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SAI 답변 모듈 기획서 (2026-06-17)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color: #1a1a1a; line-height: 1.65; max-width: 920px; margin: 0 auto; padding: 32px 20px 80px; background: #fff; }
+  h1 { font-size: 24px; border-bottom: 3px solid #1a3a5c; padding-bottom: 12px; }
+  h2 { font-size: 18px; margin-top: 36px; color: #1a3a5c; border-left: 4px solid #6366f1; padding-left: 10px; }
+  h3 { font-size: 15px; margin-top: 22px; color: #334155; }
+  p { font-size: 14px; color: #333; }
+  .lead { color: #555; font-size: 14px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 16px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f1f5f9; font-weight: 700; }
+  td b { color: #1a3a5c; }
+  ul { font-size: 14px; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  .tag { display: inline-block; background: #eef2ff; color: #4338ca; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+  .back { display: inline-block; margin-bottom: 18px; font-size: 13px; color: #6366f1; text-decoration: none; }
+  .muted { color: #888; font-size: 12px; }
+</style>
+</head>
+<body>
+<a class="back" href="index.html">← 답변 모듈 목업으로 돌아가기</a>
+<h1>SAI 답변 모듈 기획서</h1>
+<p class="muted">2026-06-17 기준 · Seoul Auction Intelligence (미술 자산관리 AI) · 답변을 재사용 모듈 조합으로 설계</p>
+
+<h2>1. 개요</h2>
+<div class="lead">
+SAI 답변은 <b>AI 답변(자연어)을 기본 틀</b>로 하고, 답변 단락에서 추출한 키워드와 매칭되는 <b>데이터 모듈</b>을 해당 단락 하단에 붙여 구성한다. 데이터 모듈은 서울옥션블루(SAB) 자체 경매 데이터를 근거로 하며 Gemini·ChatGPT 대비 핵심 차별화 영역이다. 9월 오픈 범위는 <b>작품·작가·시리즈·경매</b>까지이며, 시장통계·전시·뉴스 등은 이후 별도 산정한다.
+</div>
+
+<h2>2. 운영 모듈 (8종)</h2>
+<table>
+<thead><tr><th>모듈</th><th>역할</th></tr></thead>
+<tbody>
+<tr><td><b>AI 답변</b></td><td>모든 답변의 기본 틀(모듈로 보지 않음). 단락 생성 + 단락별 데이터 모듈 호출</td></tr>
+<tr><td><b>작가</b></td><td>언급된 작가 카드(대표작 썸네일 + 한줄설명). 1명만 있어도 100% 폭. 동명이인 있으면 함께 표시</td></tr>
+<tr><td><b>작품</b></td><td>언급된 작품 카드(작가명·작품명·캡션)</td></tr>
+<tr><td><b>시리즈</b></td><td>언급된 시리즈 카드(작가·시리즈명·시기·설명 + 썸네일)</td></tr>
+<tr><td><b>화풍</b></td><td>언급된 화풍 카드(시기·지역·대표 작가)</td></tr>
+<tr><td><b>경매 기록</b></td><td>단일·유사·최근 통합. 가로 스와이프 카드(최근 거래순, 최대 10건)</td></tr>
+<tr><td><b>경매 순위</b></td><td>순위·최고가 의도. 1개씩 큰 카드, 낙찰가 높은순, 1위 100% 바게이지</td></tr>
+<tr><td><b>컨설팅 안내</b></td><td>흰 박스 + "1:1 미술 컨설팅" 헤더 + 의도별 CTA. 배너 바로 위에 액션 버튼(복사·좋아요·아쉬워요·새로고침)</td></tr>
+</tbody>
+</table>
+
+<h2>3. 단락별 키워드 → 모듈 매칭</h2>
+<p>AI 답변 단락에 실제로 언급된 대상만 모듈로 표시한다(기간·연관도로 임의 추정하지 않음).</p>
+<table>
+<thead><tr><th>단락 키워드</th><th>매칭 모듈</th><th>표시 규칙</th></tr></thead>
+<tbody>
+<tr><td>작가명</td><td><b>작가</b></td><td>단락에 등장한 작가만. 동명이인 함께 표시</td></tr>
+<tr><td>작품명</td><td><b>작품</b></td><td>단락에 등장한 작품만</td></tr>
+<tr><td>시리즈명</td><td><b>시리즈</b></td><td>언급된 시리즈만 (시기로 추정 안 함)</td></tr>
+<tr><td>화풍명</td><td><b>화풍</b></td><td>언급된 화풍만</td></tr>
+<tr><td>경매·낙찰·기록</td><td><b>경매 기록</b></td><td>가로 스와이프 카드, 최근 거래순</td></tr>
+<tr><td>제일·최고·탑N·순위</td><td><b>경매 순위</b></td><td>1개씩 큰 카드 + 낙찰가 높은순 + 1위 100% 바게이지</td></tr>
+</tbody>
+</table>
+
+<h2>4. 질의 의도별 화면 구성</h2>
+<table>
+<thead><tr><th>의도 (예시 질의)</th><th>답변 구성</th></tr></thead>
+<tbody>
+<tr><td><b>작가 정보</b><br/>"김환기에 대해 알려줘"</td><td>AI 답변(소개) + 작가(언급 작가) + AI 답변(작업·화풍) + 화풍 + AI 답변(대표작) + 시리즈 + 작품 + AI 답변(발자취·경매) + 경매 기록 + 컨설팅 안내</td></tr>
+<tr><td><b>작품 시세</b><br/>"김환기 'Universe' 작품 시세"</td><td><b>모듈 미적용</b> — 기존 시세 화면: 시세 정보(AI 정확도) + 가격 추이 그래프 + 유사 작품 경매 기록(대표 1건 + 더보기) + 컨설팅 배너</td></tr>
+<tr><td><b>작가의 작품들</b><br/>"김환기 작가의 작품들"</td><td>AI 답변(시기별) + 작품(시기별) + 시리즈 + 컨설팅 안내</td></tr>
+<tr><td><b>작품목록</b><br/>"파란색 장미가 나오는 작품 알려줘"</td><td>AI 답변(작가·작품명 언급) + 작품(언급 작품) + 컨설팅 안내</td></tr>
+<tr><td><b>작가목록</b><br/>"단색화 작가는 누구야?"</td><td>AI 답변 + 화풍(언급 화풍) + 작가 + 컨설팅 안내</td></tr>
+<tr><td><b>순위·최고가</b><br/>"작년에 제일 비싸게 팔린 작품"·"한국 탑 12 고가 거래"</td><td>AI 답변 + 경매 순위 + 컨설팅 안내</td></tr>
+<tr><td><b>컨설팅 유도</b><br/>판매·보관·이동/설치·구매·기타</td><td>AI 답변(일반 안내) + AI 답변(서울옥션블루 서비스 안내, "작품 X 가이드"는 소제목) + 컨설팅 안내(의도별 CTA)</td></tr>
+</tbody>
+</table>
+
+<h2>5. 공통 표시 정책</h2>
+<ul>
+<li><b>단락 언급 기준</b>: 모듈은 단락에 실제 언급된 대상만 표시(기간·연관도 추정 안 함)</li>
+<li><b>모듈 제목 "연관" 미사용</b>: 작가 / 작품 / 시리즈 / 화풍 / 경매 기록 / 경매 순위 — 영역 인식용 작은 회색 볼드</li>
+<li><b>라운드 박스 제거</b>: 답변 화면 모듈은 테두리 없이 하나의 답변으로 연속 표시</li>
+<li><b>1개 데이터 100% 폭</b> / <b>가로 스와이프 숫자 페이징</b>("현재 / 총")</li>
+<li><b>컨설팅 배너 통일</b>: 흰 박스 + "1:1 미술 컨설팅" 헤더 + 의도별 버튼, 배너 바로 위 액션 버튼</li>
+<li><b>출처·신뢰도 라벨</b>: 데이터 모듈 "SAB 자체 경매 데이터 N건 기반" / AI 답변 "AI 일반 지식 기반"</li>
+<li><b>SAB DB 미보유 작가</b>: AI 답변 + 컨설팅 안내 강조 + "SAI 데이터가 부족합니다" 명시</li>
+</ul>
+
+<h2>6. 폐기·제외 모듈</h2>
+<table>
+<thead><tr><th>모듈</th><th>사유</th></tr></thead>
+<tbody>
+<tr><td>시장통계 · PDF 보고서 · 전시정보 · 뉴스</td><td>오픈 범위 제외(작품·작가·시리즈·경매까지)</td></tr>
+<tr><td>가격 추이 그래프</td><td>단독 모듈 제외. 작품 시세는 기존 시세 화면 구현 유지</td></tr>
+<tr><td>단일작품·유사작품·최근목록 경매기록</td><td>경매 기록 1개로 통합</td></tr>
+<tr><td>컨설팅 안내·AI 답변 단독 보기</td><td>단독 목록 제외(AI 답변은 호출 기본 틀)</td></tr>
+</tbody>
+</table>
+
+<h2>7. 화면 목록 (목업)</h2>
+<table>
+<thead><tr><th>구분</th><th>질문</th></tr></thead>
+<tbody>
+<tr><td rowspan="4">작가·작품 정보</td><td>김환기에 대해 알려줘</td></tr>
+<tr><td>김환기 'Universe' 작품 시세</td></tr>
+<tr><td>김환기 작가의 작품들</td></tr>
+<tr><td>파란색 장미가 나오는 작품 알려줘</td></tr>
+<tr><td rowspan="3">그룹·랭킹 큐레이션</td><td>단색화 작가는 누구야?</td></tr>
+<tr><td>작년에 제일 비싸게 팔린 작품 뭐야?</td></tr>
+<tr><td>한국 탑 12 고가 거래</td></tr>
+<tr><td rowspan="5">1:1 컨설팅 유도</td><td>작품을 팔고싶어요</td></tr>
+<tr><td>작품 보관 서비스가 있나요?</td></tr>
+<tr><td>작품을 이동/설치 하려면?</td></tr>
+<tr><td>살만한 작품을 추천해줘</td></tr>
+<tr><td>작품으로 담보 대출 받을 수 있나요?</td></tr>
+</tbody>
+</table>
+
+<h2>8. 변경 이력</h2>
+<table>
+<thead><tr><th>일자</th><th>변경 내용</th></tr></thead>
+<tbody>
+<tr><td>2026-06-17</td><td>시장통계·PDF·전시·뉴스 모듈 제외 · 경매기록 통합(단일/유사/최근 → 경매 기록) · 경매 순위 1개씩 카드(1위 100% 바게이지) · 그래프·컨설팅·AI 답변 단독 보기 제외 · 작품 시세 모듈 미적용 · "연관" 제거 + 모듈 제목 11px 회색 · 라운드 박스 제거 · 1개 100% 폭 · 스와이프 숫자 페이징 · 컨설팅 배너 흰 박스 통일 + 액션 버튼 · 모듈 표기를 코드 대신 이름으로</td></tr>
+<tr><td>2026-06-08~09</td><td>단락별 키워드 → inline 부착 룰 · 컨설팅 유도 화면(판매·보관·이동/설치·구매·기타) 3단 구조</td></tr>
+<tr><td>2026-06-03~05</td><td>모듈 체계 정비 · 화풍 모듈 추가 · 2차 리뷰</td></tr>
+</tbody>
+</table>
+
+</body>
+</html>
