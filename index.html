@@ -937,6 +937,8 @@
       const b = el.querySelector('.tmpl-back');
       if (b) b.classList.remove('hidden');
     }
+    // deep link — 주소 해시를 현재 화면 id로 갱신 (각 화면 직접 링크 지원)
+    if (history.replaceState) history.replaceState(null, '', '#' + id);
     window.scrollTo(0, 0);
   }
   // 재질문 버튼 / 작품 클릭 → push
@@ -967,6 +969,18 @@
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') document.querySelectorAll('.info-icon.show-tooltip').forEach(el => el.classList.remove('show-tooltip'));
+  });
+
+  // deep link 초기 진입 — 주소에 #화면id 가 있으면 해당 화면으로 바로 진입
+  (function initDeepLink() {
+    const initId = (location.hash || '').replace('#', '');
+    if (initId && document.getElementById(initId)) { stack = []; applyScreen(initId); }
+  })();
+  // 주소창 해시 직접 변경(뒤로/앞으로, 링크 공유) 대응
+  window.addEventListener('hashchange', () => {
+    const h = (location.hash || '').replace('#', '');
+    const cur = document.querySelector('.screen-content.active');
+    if (h && document.getElementById(h) && h !== (cur && cur.id)) { stack = []; applyScreen(h); }
   });
 </script>
 </body>
