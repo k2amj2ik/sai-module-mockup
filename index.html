@@ -233,46 +233,38 @@
 </head>
 <body>
 <div class="layout">
-<!-- ===== 사이드바 ===== -->
 <nav class="sidebar">
 <h1>SAI 답변 모듈 — 재질문 플로우</h1>
 <div class="subtitle">2026-06-18 작동형 시안 (버튼 터치 → 템플릿 전환)</div>
 <div class="version-banner">
-<b>이용 흐름</b> — AI 답변 하단의 재질문 버튼을 누르면 폰 화면 안에서 해당 <b>템플릿</b>으로 전환됩니다. 상단 <b>← 뒤로</b>로 복귀.
+<b>이용 흐름</b> — AI 답변 하단의 재질문 버튼을 누르면 폰 화면 안에서 해당 <b>템플릿</b>으로 전환됩니다. 상단 <b>← 뒤로</b>로 복귀. (개발자 리뷰 반영 · 최대 5개 버튼 · 대표작 제거)
 </div>
 <a class="doc-link" href="catalog18.html" rel="noopener" target="_blank">
 <span class="doc-icon">📄</span>
 <span>기획서 보기<span class="doc-meta">재질문 플로우 기획서 (2026-06-18)</span></span>
 </a>
 <div class="menu-section">진입 질문 (의도별 분기)</div>
-<a class="menu-item active" data-screen="q1">1. 김환기에 대해 알려줘<span class="modules">AI 답변 + 재질문 버튼 6종</span></a>
+<a class="menu-item active" data-screen="q1">1. 김환기에 대해 알려줘<span class="modules">AI 답변 + 재질문 버튼 5</span></a>
 <a class="menu-item" data-screen="q2">2. 김환기 'Universe' 작품 시세<span class="modules">시세작품선택 템플릿으로 바로 이동</span></a>
-<a class="menu-item" data-screen="q3">3. 김환기 작가의 작품들<span class="modules">대표작 템플릿으로 바로 이동</span></a>
-<a class="menu-item" data-screen="q4">4. 파란색 장미가 나오는 작품<span class="modules">AI 답변 + 작품 3점 각각 시세·기록</span></a>
-<a class="menu-item" data-screen="q5">5. 단색화 작가는 누구야?<span class="modules">AI 답변 + 작가별 재질문(라운드로빈)</span></a>
-<a class="menu-item" data-screen="q6">6. 작년에 제일 비싼 작품<span class="modules">AI 답변 + 재질문 버튼 6종</span></a>
-<a class="menu-item" data-screen="q7">7. 한국 탑 12 고가 거래<span class="modules">경매순위 템플릿으로 바로 이동</span></a>
+<a class="menu-item" data-screen="q3">3. 김환기 작가의 작품들<span class="modules">AI 답변 + 재질문 버튼 5</span></a>
+<a class="menu-item" data-screen="q4">4. 파란색 장미가 나오는 작품<span class="modules">AI 답변 + 작품별 시세·기록</span></a>
+<a class="menu-item" data-screen="q5">5. 단색화 작가는 누구야?<span class="modules">AI 답변 + 작가별 알아보기</span></a>
+<a class="menu-item" data-screen="q6">6. 작년에 제일 비싼 작품<span class="modules">AI 답변 + 재질문 버튼 5</span></a>
+<a class="menu-item" data-screen="q7">7. 한국 탑 12 고가 거래<span class="modules">AI 답변 + 작가별 알아보기</span></a>
 <a class="menu-item" data-screen="q8">8. 작품을 팔고 싶어요<span class="modules">1:1컨설팅 템플릿으로 바로 이동</span></a>
-<div class="menu-section">템플릿 단독 보기 (8종)</div>
+<div class="menu-section">템플릿 단독 보기 (7종)</div>
 <a class="menu-item" data-screen="t1"><span class="pill">시세</span>시세작품선택 템플릿</a>
 <a class="menu-item" data-screen="t2"><span class="pill">시세</span>시세결과 템플릿</a>
 <a class="menu-item" data-screen="t3"><span class="pill">기록</span>경매기록 템플릿</a>
 <a class="menu-item" data-screen="t4"><span class="pill">기록</span>경매순위 템플릿</a>
-<a class="menu-item" data-screen="t5"><span class="pill">작품</span>대표작 템플릿</a>
 <a class="menu-item" data-screen="t6"><span class="pill">작품</span>시리즈 템플릿</a>
 <a class="menu-item" data-screen="t7"><span class="pill">화풍</span>화풍 템플릿</a>
 <a class="menu-item" data-screen="t8"><span class="pill">상담</span>1:1컨설팅 템플릿</a>
 </nav>
-<!-- ===== 메인 ===== -->
 <main class="main">
 
-<!-- ========== Q1: 김환기 작가 답변 + 재질문 버튼 ========== -->
 <div class="screen-content active" id="q1">
-<div class="main-header">
-<div class="qtype">진입 · 작가 정보</div>
-<h2>김환기에 대해 알려줘</h2>
-<div class="hint">AI 답변에 대표작이 언급되어 시세·경매기록 버튼이 함께 노출됩니다. 버튼을 눌러 템플릿으로 이동해 보세요.</div>
-</div>
+<div class="main-header"><div class="qtype">진입 · 작가 정보</div><h2>김환기에 대해 알려줘</h2><div class="hint">AI 답변에 대표작이 언급되어 시세·경매기록 버튼이 함께 노출됩니다. 버튼을 눌러 템플릿으로 이동해 보세요.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -284,29 +276,20 @@
 <p>대표작 '<b>Universe (05-Ⅳ-71 #200)</b>'를 비롯한 1970년대 뉴욕 시기의 전면점화는 그의 예술 세계를 집약합니다.</p>
 <div class="src">출처 · AI 일반 지식 기반, 최신성 보장 안 됨</div>
 </div>
-<div class="rq-bar">
-<div class="rq-lead">이어서 물어보기</div>
-<div class="rq-list">
+<div class="rq-bar"><div class="rq-lead">이어서 물어보기</div><div class="rq-list">
 <button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">'Universe (05-Ⅳ-71 #200)' 작품 시세</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">'Universe (05-Ⅳ-71 #200)' 최근 경매 기록</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t5')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 대표 작품</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
-</div>
-</div>
+</div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== Q2: 작품 시세 → 시세작품선택 즉시 이동 ========== -->
 <div class="screen-content" id="q2">
-<div class="main-header">
-<div class="qtype">진입 · 작품 시세</div>
-<h2>김환기 'Universe' 작품 시세</h2>
-<div class="hint">작품 시세 의도가 파악되어 곧바로 시세작품선택 템플릿이 표시됩니다. 작품을 누르면 시세결과로 이동합니다.</div>
-</div>
+<div class="main-header"><div class="qtype">진입 · 작품 시세</div><h2>김환기 'Universe' 작품 시세</h2><div class="hint">작품 시세 의도가 파악되어 곧바로 시세작품선택이 표시됩니다. 작품을 누르면 시세결과로 이동합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -317,133 +300,93 @@
 </div>
 <div class="select-intro">작품을 선택해 주세요.</div>
 <div class="vlist">
-<div class="select-card" onclick="nav('t2')">
-<div class="select-thumb"></div>
-<div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Universe (05-Ⅳ-71 #200)</div><div class="sa-cap">1971, 회화, 254×254cm, oil on cotton</div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Universe (05-Ⅳ-71 #200)</div><div class="sa-cap">1971, 회화, 254×254cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Universe (05-Ⅳ-71 #201)</div><div class="sa-cap">1971, 회화, 254×254cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">19-VI-71 #206</div><div class="sa-cap">1971, 회화, 257×207cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">9-XII-71 #216</div><div class="sa-cap">1971, 회화, 254×203cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">3-V-71 #203</div><div class="sa-cap">1971, 회화, 254×203cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">16-IV-70 #156</div><div class="sa-cap">1970, 회화, 232×177cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">24-VII-71 #208</div><div class="sa-cap">1971, 회화, 248×208cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">05-IV-71 #199</div><div class="sa-cap">1971, 회화, 200×160cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Echo 22-X-73 #325</div><div class="sa-cap">1973, 회화, 264×208cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">27-VII-72 #228</div><div class="sa-cap">1972, 회화, 264×211cm, oil on cotton</div></div></div>
 </div>
-<div class="select-card" onclick="nav('t2')">
-<div class="select-thumb"></div>
-<div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Universe (05-Ⅳ-71 #201)</div><div class="sa-cap">1971, 회화, 254×254cm, oil on cotton</div></div>
-</div>
-<div class="select-card" onclick="nav('t2')">
-<div class="select-thumb"></div>
-<div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">19-VI-71 #206</div><div class="sa-cap">1971, 회화, 257×207cm, oil on cotton</div></div>
-</div>
-</div>
-<button class="more-btn">다른 작품 더보기</button>
+<div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== Q3: 작가의 작품들 → 대표작 즉시 이동 ========== -->
 <div class="screen-content" id="q3">
-<div class="main-header">
-<div class="qtype">진입 · 작품 정보</div>
-<h2>김환기 작가의 작품들</h2>
-<div class="hint">작가가 특정되고 작품 정보 의도가 파악되어 대표작 템플릿이 바로 표시됩니다.</div>
-</div>
+<div class="main-header"><div class="qtype">진입 · 작품 정보</div><h2>김환기 작가의 작품들</h2><div class="hint">작가가 특정되어 작품 정보 의도가 파악됐습니다. AI 답변 + 재질문 버튼으로 시세작품선택을 적극 유도합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
 <div class="screen">
 <div class="user-msg">김환기 작가의 작품들 보여줘</div>
 <div class="narrative">
-<p>김환기의 대표 작품을 소개합니다. 1970년대 뉴욕 시기 전면점화를 중심으로 정리했습니다.</p>
+<p>김환기는 1970년대 뉴욕 시기에 화면 전체를 점으로 채운 <b>전면점화</b> 연작을 남겼습니다. 대표작으로 '<b>Universe (05-Ⅳ-71 #200)</b>', '<b>19-VI-71 #206</b>' 등이 있습니다.</p>
+<div class="src">출처 · AI 일반 지식 기반, 최신성 보장 안 됨</div>
 </div>
-<div class="mod-title">대표 작품</div>
-<div class="vlist">
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">Universe (05-Ⅳ-71 #200)</div><div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">19-VI-71 #206</div><div class="v-meta">1971, 회화, 257×207cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">9-XII-71 #216</div><div class="v-meta">1971, 회화, 254×203cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">3-V-71 #203</div><div class="v-meta">1971, 회화, 254×203cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
-</div>
-<button class="more-btn">작품 더보기</button>
+<div class="rq-bar"><div class="rq-lead">이어서 물어보기</div><div class="rq-list">
+<button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">김환기 작품 시세 — 작품 선택</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 대표작 경매 기록</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
+</div></div>
+<div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== Q4: 파란 장미 (작품 3점 각각 시세·경매기록) ========== -->
 <div class="screen-content" id="q4">
-<div class="main-header">
-<div class="qtype">진입 · 이미지·모티프 검색</div>
-<h2>파란색 장미가 나오는 작품 알려줘</h2>
-<div class="hint">서로 다른 작품 3점이 검색되어 각 작품별 시세·경매기록 버튼이 표시됩니다 (맥락별 분리 · 최대 6개).</div>
-</div>
+<div class="main-header"><div class="qtype">진입 · 이미지·모티프 검색</div><h2>파란색 장미가 나오는 작품 알려줘</h2><div class="hint">서로 다른 작품 3점이 검색되어, 작품별 시세·경매기록 재질문이 5개 한도로 생성됩니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
 <div class="screen">
 <div class="user-msg">파란색 장미가 나오는 작품 알려줘</div>
 <div class="narrative">
-<p>'파란 장미' 모티프가 등장하는 작품 3점을 찾았습니다. 서로 다른 작품이므로 각 작품의 시세·경매기록을 따로 확인할 수 있습니다.</p>
+<p>'파란 장미' 모티프가 등장하는 작품 3점을 찾았습니다 — Marc Chagall 'Le Bouquet Bleu', 천경자 '장미와 여인', 김종학 '설악의 장미'. 서로 다른 작품이므로 각 작품의 시세·경매기록을 따로 확인할 수 있습니다.</p>
 <div class="src">출처 · 작품 이미지·캡션 매칭 기반</div>
 </div>
-<div class="mod-title">검색된 작품</div>
-<div class="vlist">
-<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">Marc Chagall</div><div class="v-title">Le Bouquet Bleu</div><div class="v-meta">1949, 회화, 65×54cm, oil on canvas</div></div></div>
-<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">천경자</div><div class="v-title">장미와 여인</div><div class="v-meta">1974, 회화, 41×32cm, 종이에 채색</div></div></div>
-<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김종학</div><div class="v-title">설악의 장미</div><div class="v-meta">2005, 회화, 53×45cm, oil on canvas</div></div></div>
-</div>
-<div class="rq-bar">
-<div class="rq-lead">작품별로 이어서 물어보기</div>
-<div class="rq-list">
+<div class="rq-bar"><div class="rq-lead">작품별로 이어서 물어보기</div><div class="rq-list">
 <button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">Chagall 'Le Bouquet Bleu' 작품 시세</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">Chagall 'Le Bouquet Bleu' 경매 기록</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">천경자 '장미와 여인' 작품 시세</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">천경자 '장미와 여인' 경매 기록</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">김종학 '설악의 장미' 작품 시세</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">김종학 '설악의 장미' 경매 기록</span><span class="rq-arrow">›</span></button>
-</div>
-</div>
+</div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== Q5: 단색화 작가 (작가 우선 라운드로빈) ========== -->
 <div class="screen-content" id="q5">
-<div class="main-header">
-<div class="qtype">진입 · 작가 큐레이션</div>
-<h2>단색화 작가는 누구야?</h2>
-<div class="hint">작가가 우선 적용되고, 표시항목(시세 → 경매기록 → 경매순위 …) 우선순위는 후순위로 라운드로빈됩니다. (작가 2명 → A시세, B시세, A경매기록 …)</div>
-</div>
+<div class="main-header"><div class="qtype">진입 · 작가 큐레이션</div><h2>단색화 작가는 누구야?</h2><div class="hint">작가가 여러 명이므로, 작가 각각을 알아보는 재질문을 작가당 1개씩(최대 5명) 생성합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
 <div class="screen">
 <div class="user-msg">단색화 작가는 누구야?</div>
 <div class="narrative">
-<p>단색화는 1970년대에 형성된 한국 추상회화 경향으로, 작가의 반복적 행위와 재료의 물성을 강조합니다. 대표 작가로 <b>박서보</b>, <b>정상화</b> 등이 있습니다.</p>
+<p>단색화는 1970년대에 형성된 한국 추상회화 경향으로, 작가의 반복적 행위와 재료의 물성을 강조합니다. 대표 작가로 <b>박서보·정상화·하종현·윤형근·권영우</b> 등이 있습니다.</p>
 <div class="src">출처 · AI 일반 지식 기반, 최신성 보장 안 됨</div>
 </div>
-<div class="mod-title">단색화 대표 작가</div>
-<div class="vlist">
-<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">박서보</div><div class="v-meta">1931–2023 · 대한민국</div><div class="v-bio">한국 단색화의 핵심 인물. '묘법(Écriture)' 연작으로 알려진 단색조 회화 작가.</div></div></div>
-<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">정상화</div><div class="v-meta">1932– · 대한민국</div><div class="v-bio">격자 단색화의 대표 작가. 뜯어내고 채우는 반복 기법으로 알려짐.</div></div></div>
-</div>
-<div class="rq-bar">
-<div class="rq-lead">작가별로 이어서 물어보기</div>
-<div class="rq-list">
-<button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">박서보 작품 시세</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">정상화 작품 시세</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">박서보 경매 기록</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">정상화 경매 기록</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">박서보 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">정상화 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
-</div>
-</div>
+<div class="rq-bar"><div class="rq-lead">작가별로 알아보기</div><div class="rq-list">
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">박서보에 대해 알아보기 ('묘법' 연작의 단색화 핵심 인물)</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">정상화에 대해 알아보기 (격자 단색화의 대표 작가)</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">하종현에 대해 알아보기 (마대 배압법의 단색화 작가)</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">윤형근에 대해 알아보기 (엄버·울트라마린 기둥 구도)</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">권영우에 대해 알아보기 (한지 단색화의 대표 작가)</span><span class="rq-arrow">›</span></button>
+</div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== Q6: 작년 최고가 작품 (6종 재질문) ========== -->
 <div class="screen-content" id="q6">
-<div class="main-header">
-<div class="qtype">진입 · 랭킹·시세</div>
-<h2>작년에 제일 비싸게 팔린 작품 뭐야?</h2>
-<div class="hint">언급된 작가·작품 기준으로 시세 → 경매기록 → 경매순위 → 대표작 → 시리즈 → 화풍 버튼이 표시됩니다.</div>
-</div>
+<div class="main-header"><div class="qtype">진입 · 랭킹·시세</div><h2>작년에 제일 비싸게 팔린 작품 뭐야?</h2><div class="hint">언급된 작가·작품 기준으로 시세작품선택을 우선 유도하는 재질문 5개를 생성합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -453,71 +396,43 @@
 <p>지난해 경매 최고 낙찰작은 김환기의 '<b>19-VI-71 #206</b>'으로, 약 <b>122억 원</b>에 거래되었습니다.</p>
 <div class="src">출처 · SAB 자체 경매 데이터 기반</div>
 </div>
-<div class="mod-title">최고 낙찰작</div>
-<div class="vlist">
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">19-VI-71 #206</div><div class="v-meta">1971, 회화, 257×207cm · KRW 122.5억 (2025)</div></div><span class="v-arrow">›</span></div>
-</div>
-<div class="rq-bar">
-<div class="rq-lead">이어서 물어보기</div>
-<div class="rq-list">
+<div class="rq-bar"><div class="rq-lead">이어서 물어보기</div><div class="rq-list">
 <button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">'19-VI-71 #206' 작품 시세</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">'19-VI-71 #206' 최근 경매 기록</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t5')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 대표 작품</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
 <button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
-</div>
-</div>
+</div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== Q7: 한국 탑 12 → 경매순위 즉시 이동 ========== -->
 <div class="screen-content" id="q7">
-<div class="main-header">
-<div class="qtype">진입 · 경매 순위</div>
-<h2>한국 탑 12 고가 거래 작품</h2>
-<div class="hint">순위 의도가 파악되어 경매순위 템플릿이 바로 표시됩니다 (국내 작가 전체 기준).</div>
-</div>
+<div class="main-header"><div class="qtype">진입 · 경매 순위</div><h2>한국 탑 12 고가 거래 작품</h2><div class="hint">여러 작가의 순위이므로, 순위 상위 작가를 각각 알아보는 재질문 5개를 생성합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
 <div class="screen">
 <div class="user-msg">한국에서 제일 비싸게 거래된 작품 탑 12</div>
 <div class="narrative">
-<p>국내 작가 작품의 역대 경매 최고 낙찰가 순위입니다.</p>
+<p>국내 작가 작품의 역대 경매 최고가 순위는 <b>1위 김환기</b>(약 132억), 2위 이우환, 3위 박서보 순입니다. 상위권은 한국 추상·단색화 작가가 차지하고 있습니다.</p>
+<div class="src">출처 · SAB 자체 경매 데이터 기반</div>
 </div>
-<div class="mod-title">경매 낙찰가 순위 (국내 작가)</div>
-<div class="rank-list">
-<div class="rank-row first">
-<div class="rank-no">1</div>
-<div class="rank-thumb"></div>
-<div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">19-VI-71 #206</div><div class="r-krw">KRW 13,200,000,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></div><div class="r-meta">Christie's Hong Kong · 2019.11.23</div></div>
-</div>
-<div class="rank-row">
-<div class="rank-no">2</div>
-<div class="rank-thumb"></div>
-<div class="rank-info"><div class="r-artist">이우환</div><div class="r-title">From Point No.780217</div><div class="r-krw">KRW 8,600,000,000</div><div class="r-meta">Christie's Hong Kong · 2025.03.24</div></div>
-</div>
-<div class="rank-row">
-<div class="rank-no">3</div>
-<div class="rank-thumb"></div>
-<div class="rank-info"><div class="r-artist">박서보</div><div class="r-title">Écriture No.080612</div><div class="r-krw">KRW 5,000,000,000</div><div class="r-meta">Seoul Auction · 2025.05.12</div></div>
-</div>
-</div>
-<button class="more-btn">순위 더보기 (4~12위)</button>
+<div class="rq-bar"><div class="rq-lead">작가별로 알아보기</div><div class="rq-list">
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">김환기에 대해 알아보기 (역대 국내 경매 최고가 1위)</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">이우환에 대해 알아보기 (모노하 대표, From Point/Line)</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">박서보에 대해 알아보기 (단색화 '묘법' 연작)</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">정상화에 대해 알아보기 (격자 단색화)</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">유영국에 대해 알아보기 (색면 추상 1세대)</span><span class="rq-arrow">›</span></button>
+</div></div>
+<div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== Q8: 작품 판매 → 1:1컨설팅 즉시 이동 ========== -->
 <div class="screen-content" id="q8">
-<div class="main-header">
-<div class="qtype">진입 · 1:1 컨설팅 (판매)</div>
-<h2>작품을 팔고 싶어요</h2>
-<div class="hint">판매 의도가 파악되어 1:1컨설팅 템플릿이 바로 표시됩니다.</div>
-</div>
+<div class="main-header"><div class="qtype">진입 · 1:1 컨설팅 (판매)</div><h2>작품을 팔고 싶어요</h2><div class="hint">판매 의도가 파악되어 곧바로 1:1컨설팅 템플릿이 표시됩니다. (컨설팅 화면 하단에는 재질문 버튼이 없습니다.)</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -543,21 +458,13 @@
 </ol>
 </div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
-<div class="cta-consultant">
-<div class="title">작품을 판매하고 싶다면?</div>
-<button>판매 신청</button>
-</div>
+<div class="cta-consultant"><div class="title">작품을 판매하고 싶다면?</div><button>판매 신청</button></div>
 </div>
 </div>
 </div>
 
-<!-- ========== T1: 시세작품선택 템플릿 ========== -->
 <div class="screen-content" id="t1">
-<div class="main-header">
-<div class="qtype">템플릿 · 시세작품선택</div>
-<h2>시세작품선택 템플릿</h2>
-<div class="hint">고유기능: 작품 선택 UI(기획서 "공통UI) 작품 선택"에서 '작가 선택으로 돌아가기' 제거). 작품 선택 시 시세결과로 이동.</div>
-</div>
+<div class="main-header"><div class="qtype">템플릿 · 시세작품선택</div><h2>시세작품선택 템플릿</h2><div class="hint">고유기능: 작품 선택 UI(작가 선택으로 돌아가기 제거). 더보기 없이 전체(최대 10개) 표시. 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -569,31 +476,29 @@
 </div>
 <div class="select-intro">작품을 선택해 주세요.</div>
 <div class="vlist">
-<div class="select-card" onclick="nav('t2')">
-<div class="select-thumb"></div>
-<div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Universe (05-Ⅳ-71 #200)</div><div class="sa-cap">1971, 회화, 254×254cm, oil on cotton</div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Universe (05-Ⅳ-71 #200)</div><div class="sa-cap">1971, 회화, 254×254cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Universe (05-Ⅳ-71 #201)</div><div class="sa-cap">1971, 회화, 254×254cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">19-VI-71 #206</div><div class="sa-cap">1971, 회화, 257×207cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">9-XII-71 #216</div><div class="sa-cap">1971, 회화, 254×203cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">3-V-71 #203</div><div class="sa-cap">1971, 회화, 254×203cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">16-IV-70 #156</div><div class="sa-cap">1970, 회화, 232×177cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">24-VII-71 #208</div><div class="sa-cap">1971, 회화, 248×208cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">05-IV-71 #199</div><div class="sa-cap">1971, 회화, 200×160cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Echo 22-X-73 #325</div><div class="sa-cap">1973, 회화, 264×208cm, oil on cotton</div></div></div>
+<div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">27-VII-72 #228</div><div class="sa-cap">1972, 회화, 264×211cm, oil on cotton</div></div></div>
 </div>
-<div class="select-card" onclick="nav('t2')">
-<div class="select-thumb"></div>
-<div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Universe (05-Ⅳ-71 #201)</div><div class="sa-cap">1971, 회화, 254×254cm, oil on cotton</div></div>
-</div>
-<div class="select-card" onclick="nav('t2')">
-<div class="select-thumb"></div>
-<div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">19-VI-71 #206</div><div class="sa-cap">1971, 회화, 257×207cm, oil on cotton</div></div>
-</div>
-</div>
-<button class="more-btn">다른 작품 더보기</button>
+<div class="rq-bar"><div class="rq-lead">다른 정보도 볼까요?</div><div class="rq-list">
+<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
+</div></div>
+<div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== T2: 시세결과 템플릿 (20260617 시세화면 + AI 답변) ========== -->
 <div class="screen-content" id="t2">
-<div class="main-header">
-<div class="qtype">템플릿 · 시세결과</div>
-<h2>시세결과 템플릿</h2>
-<div class="hint">고유기능: 20260617 'Universe 작품 시세' 화면과 동일 + 상단 AI 답변 영역.</div>
-</div>
+<div class="main-header"><div class="qtype">템플릿 · 시세결과</div><h2>시세결과 템플릿</h2><div class="hint">고유기능: 시세 정보 + 가격추이 그래프 + 유사 작품(더보기 제거) + 상단 AI 답변 + 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -603,79 +508,28 @@
 <p>김환기 '<b>Universe (05-Ⅳ-71 #200)</b>' 작품의 시세 정보입니다. 최근 경매 낙찰 기록을 근거로 분석했습니다.</p>
 </div>
 <div style="margin-bottom:20px;">
-<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
-<span style="font-size:16px;font-weight:700;">시세 정보</span>
-<span class="accuracy-label middle">AI 정확도 : 중간</span>
-<span class="info-icon" data-tooltip="내부 DB 기반으로 자체 계산한 시세입니다.">ⓘ</span>
-</div>
-<div class="price-text">
-김환기 'Universe' 회화 작품의 최근 경매 낙찰가는 <b>122억 5,140만 원</b>이었습니다. 최근 10건 기준으로 최저 낙찰가는 <b>30억 5,000만 원</b>, 최고 낙찰가는 <b>122억 5,140만 원</b>이었습니다. 추정가는 <b>100억 원 ~ 150억 원</b>입니다.<br/><br/>
-작품 진위여부 및 컨디션, 재질, 크기, 에디션에 따라 시세가 달라질 수 있습니다. 정확한 감정을 원하시면 1:1 미술 컨설팅을 신청해 주세요.
-</div>
+<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;"><span style="font-size:16px;font-weight:700;">시세 정보</span><span class="accuracy-label middle">AI 정확도 : 중간</span><span class="info-icon" data-tooltip="내부 DB 기반으로 자체 계산한 시세입니다.">ⓘ</span></div>
+<div class="price-text">김환기 'Universe' 회화 작품의 최근 경매 낙찰가는 <b>122억 5,140만 원</b>이었습니다. 최근 10건 기준으로 최저 낙찰가는 <b>30억 5,000만 원</b>, 최고 낙찰가는 <b>122억 5,140만 원</b>이었습니다. 추정가는 <b>100억 원 ~ 150억 원</b>입니다.<br/><br/>작품 진위여부 및 컨디션, 재질, 크기, 에디션에 따라 시세가 달라질 수 있습니다. 정확한 감정을 원하시면 1:1 미술 컨설팅을 신청해 주세요.</div>
 </div>
 <div style="margin-bottom:20px;">
 <div style="font-size:16px;font-weight:700;margin-bottom:12px;">유사 작품 가격 추이</div>
-<div class="chart-wrap">
-<svg class="chart-svg" viewbox="0 0 400 180">
-<line stroke="#ddd" x1="40" x2="390" y1="160" y2="160"></line>
-<line stroke="#ddd" x1="40" x2="40" y1="20" y2="160"></line>
-<text fill="#888" font-size="11" x="4" y="34">150억</text>
-<text fill="#888" font-size="11" x="4" y="96">90억</text>
-<text fill="#888" font-size="11" x="4" y="158">30억</text>
-<text fill="#888" font-size="11" x="48" y="175">2021</text>
-<text fill="#888" font-size="11" x="130" y="175">2022</text>
-<text fill="#888" font-size="11" x="215" y="175">2023</text>
-<text fill="#888" font-size="11" x="300" y="175">2024</text>
-<text fill="#888" font-size="11" x="365" y="175">2025</text>
-<circle cx="60" cy="120" fill="#1a3a5c" r="4"></circle>
-<circle cx="120" cy="95" fill="#1a3a5c" r="4"></circle>
-<circle cx="150" cy="110" fill="#1a3a5c" r="4"></circle>
-<circle cx="215" cy="70" fill="#1a3a5c" r="4"></circle>
-<circle cx="250" cy="88" fill="#1a3a5c" r="4"></circle>
-<circle cx="305" cy="60" fill="#1a3a5c" r="4"></circle>
-<circle cx="370" cy="32" fill="#b8312f" r="5"></circle>
-</svg>
-<div style="display:flex;gap:14px;font-size:11px;color:#666;padding:6px 8px 0;border-top:1px dashed #eee;margin-top:4px;">
-<span><span style="color:#1a3a5c;">●</span> 개별 낙찰가</span>
-<span><span style="color:#b8312f;">●</span> 최근 최고가</span>
+<div class="chart-wrap"><svg class="chart-svg" viewbox="0 0 400 180"><line stroke="#ddd" x1="40" x2="390" y1="160" y2="160"></line><line stroke="#ddd" x1="40" x2="40" y1="20" y2="160"></line><text fill="#888" font-size="11" x="4" y="34">150억</text><text fill="#888" font-size="11" x="4" y="96">90억</text><text fill="#888" font-size="11" x="4" y="158">30억</text><text fill="#888" font-size="11" x="48" y="175">2021</text><text fill="#888" font-size="11" x="130" y="175">2022</text><text fill="#888" font-size="11" x="215" y="175">2023</text><text fill="#888" font-size="11" x="300" y="175">2024</text><text fill="#888" font-size="11" x="365" y="175">2025</text><circle cx="60" cy="120" fill="#1a3a5c" r="4"></circle><circle cx="120" cy="95" fill="#1a3a5c" r="4"></circle><circle cx="150" cy="110" fill="#1a3a5c" r="4"></circle><circle cx="215" cy="70" fill="#1a3a5c" r="4"></circle><circle cx="250" cy="88" fill="#1a3a5c" r="4"></circle><circle cx="305" cy="60" fill="#1a3a5c" r="4"></circle><circle cx="370" cy="32" fill="#b8312f" r="5"></circle></svg><div style="display:flex;gap:14px;font-size:11px;color:#666;padding:6px 8px 0;border-top:1px dashed #eee;margin-top:4px;"><span><span style="color:#1a3a5c;">●</span> 개별 낙찰가</span><span><span style="color:#b8312f;">●</span> 최근 최고가</span></div></div>
 </div>
-</div>
-</div>
-<div style="margin-bottom:14px;">
-<div style="border:1px solid #ececf0;border-radius:10px;padding:14px;background:#fff;">
-<div style="display:flex;gap:12px;">
-<div style="width:84px;height:84px;aspect-ratio:1;border-radius:7px;flex-shrink:0;background:linear-gradient(135deg,#1e3a8a,#0c1638);"></div>
-<div style="flex:1;min-width:0;">
-<div style="font-size:12px;color:#777;">김환기</div>
-<div style="font-size:15px;font-weight:700;line-height:1.3;">Universe (05-Ⅳ-71 #200)</div>
-<div style="font-size:12px;color:#888;margin-top:2px;">1971, 회화, 254×254cm, oil on cotton</div>
-</div>
-</div>
-<div style="font-size:13px;color:#555;margin-top:12px;">
-<div style="display:flex;gap:8px;margin-top:2px;"><span style="color:#888;width:46px;flex-shrink:0;">경매사</span><span>Christie's Hong Kong</span></div>
-<div style="display:flex;gap:8px;margin-top:2px;"><span style="color:#888;width:46px;flex-shrink:0;">경매일</span><span>2021.12.02</span></div>
-<div style="display:flex;gap:8px;margin-top:2px;"><span style="color:#888;width:46px;flex-shrink:0;">추정가</span><span>HKD 40,000,000–HKD 60,000,000</span></div>
-<div style="display:flex;gap:8px;margin-top:2px;"><span style="color:#888;width:46px;flex-shrink:0;">낙찰가</span><span style="color:#b8312f;font-weight:700;">HKD 88,000,000 (KRW 132억 원)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div>
-</div>
-<button class="more-btn">유사 작품 더보기</button>
-</div>
-</div>
+<div style="margin-bottom:14px;"><div style="border:1px solid #ececf0;border-radius:10px;padding:14px;background:#fff;"><div style="display:flex;gap:12px;"><div style="width:84px;height:84px;aspect-ratio:1;border-radius:7px;flex-shrink:0;background:linear-gradient(135deg,#1e3a8a,#0c1638);"></div><div style="flex:1;min-width:0;"><div style="font-size:12px;color:#777;">김환기</div><div style="font-size:15px;font-weight:700;line-height:1.3;">Universe (05-Ⅳ-71 #200)</div><div style="font-size:12px;color:#888;margin-top:2px;">1971, 회화, 254×254cm, oil on cotton</div></div></div><div style="font-size:13px;color:#555;margin-top:12px;"><div style="display:flex;gap:8px;margin-top:2px;"><span style="color:#888;width:46px;flex-shrink:0;">경매사</span><span>Christie's Hong Kong</span></div><div style="display:flex;gap:8px;margin-top:2px;"><span style="color:#888;width:46px;flex-shrink:0;">경매일</span><span>2021.12.02</span></div><div style="display:flex;gap:8px;margin-top:2px;"><span style="color:#888;width:46px;flex-shrink:0;">추정가</span><span>HKD 40,000,000–HKD 60,000,000</span></div><div style="display:flex;gap:8px;margin-top:2px;"><span style="color:#888;width:46px;flex-shrink:0;">낙찰가</span><span style="color:#b8312f;font-weight:700;">HKD 88,000,000 (KRW 132억 원)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div></div>
+<div class="rq-bar"><div class="rq-lead">이어서 물어보기</div><div class="rq-list">
+<button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">'Universe (05-Ⅳ-71 #200)' 경매 기록</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
+</div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
-<div class="cta-consultant">
-<div class="title">전문가에게 직접 신청하고 싶다면?</div>
-<button>시세 분석 신청</button>
-</div>
+<div class="cta-consultant"><div class="title">전문가에게 직접 신청하고 싶다면?</div><button>시세 분석 신청</button></div>
 </div>
 </div>
 </div>
 
-<!-- ========== T3: 경매기록 템플릿 (세로 목록) ========== -->
 <div class="screen-content" id="t3">
-<div class="main-header">
-<div class="qtype">템플릿 · 경매기록</div>
-<h2>경매기록 템플릿</h2>
-<div class="hint">고유기능: 경매 기록 모듈 + 상단 AI 답변. 가로 스와이프 → 한 화면 세로 목록(작은 썸네일).</div>
-</div>
+<div class="main-header"><div class="qtype">템플릿 · 경매기록</div><h2>경매기록 템플릿</h2><div class="hint">고유기능: 경매 기록 모듈 + 상단 AI 답변. 가로 스와이프 → 세로 목록(최대 10건, 더보기 없음). 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -683,60 +537,35 @@
 <div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
 <div class="user-msg">김환기 'Universe (05-Ⅳ-71 #200)' 최근 경매 기록</div>
 <div class="narrative">
-<p>김환기 '<b>Universe (05-Ⅳ-71 #200)</b>' 작품의 경매 낙찰 기록입니다. 최근 거래순으로 정리했습니다.</p>
-<div class="src">출처 · SAB 자체 경매 데이터 3건 기반</div>
+<p>김환기 '<b>Universe (05-Ⅳ-71 #200)</b>' 작품 및 유사 작품의 경매 낙찰 기록입니다. 최근 거래순으로 정리했습니다.</p>
+<div class="src">출처 · SAB 자체 경매 데이터 기반</div>
 </div>
 <div class="mod-title">경매 기록 (최근순)</div>
 <div class="vlist">
-<div class="rec-card">
-<div class="rec-thumb"></div>
-<div class="rec-info">
-<div class="v-artist">김환기</div>
-<div class="v-title">Universe (05-Ⅳ-71 #200)</div>
-<div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div>
-<div class="auc-row"><span class="lbl">경매사</span><span>Christie's Hong Kong</span></div>
-<div class="auc-row"><span class="lbl">경매일</span><span>2019.11.23</span></div>
-<div class="auc-row"><span class="lbl">추정가</span><span>HKD 60,000,000–HKD 80,000,000</span></div>
-<div class="auc-row"><span class="lbl">낙찰가</span><span class="price">HKD 88,000,000 (KRW 13,200,000,000)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">Universe (05-Ⅳ-71 #200)</div><div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>Christie's Hong Kong</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2019.11.23</span></div><div class="auc-row"><span class="lbl">추정가</span><span>HKD 60,000,000–HKD 80,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">HKD 88,000,000 (KRW 13,200,000,000)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">19-VI-71 #206</div><div class="v-meta">1971, 회화, 257×207cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>Christie's New York</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2025.11.17</span></div><div class="auc-row"><span class="lbl">추정가</span><span>USD 6,000,000–USD 8,500,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">USD 8,400,000 (KRW 12,251,400,000)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">9-XII-71 #216</div><div class="v-meta">1971, 회화, 254×203cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>Christie's Hong Kong</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2024.09.26</span></div><div class="auc-row"><span class="lbl">추정가</span><span>HKD 40,000,000–HKD 60,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">HKD 55,000,000 (KRW 7,855,160,000)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">Universe (05-Ⅳ-71 #200)</div><div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>Sotheby's Hong Kong</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2015.10.05</span></div><div class="auc-row"><span class="lbl">추정가</span><span>HKD 40,000,000–HKD 60,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">HKD 47,200,000 (KRW 6,608,000,000)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">3-V-71 #203</div><div class="v-meta">1971, 회화, 254×203cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>Seoul Auction</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2024.03.29</span></div><div class="auc-row"><span class="lbl">추정가</span><span>KRW 4,000,000,000–KRW 6,000,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">KRW 5,000,000,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">16-IV-70 #156</div><div class="v-meta">1970, 회화, 232×177cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>Seoul Auction</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2022.05.19</span></div><div class="auc-row"><span class="lbl">추정가</span><span>KRW 3,500,000,000–KRW 5,000,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">KRW 4,400,000,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">24-VII-71 #208</div><div class="v-meta">1971, 회화, 248×208cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>K-Auction</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2023.11.22</span></div><div class="auc-row"><span class="lbl">추정가</span><span>KRW 3,000,000,000–KRW 4,500,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">KRW 3,900,000,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">05-IV-71 #199</div><div class="v-meta">1971, 회화, 200×160cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>Seoul Auction</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2021.06.15</span></div><div class="auc-row"><span class="lbl">추정가</span><span>KRW 2,500,000,000–KRW 3,500,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">KRW 3,200,000,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">Echo 22-X-73 #325</div><div class="v-meta">1973, 회화, 264×208cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>Christie's Hong Kong</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2018.05.26</span></div><div class="auc-row"><span class="lbl">추정가</span><span>HKD 18,000,000–HKD 25,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">HKD 23,000,000 (KRW 3,290,000,000)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
+<div class="rec-card"><div class="rec-thumb"></div><div class="rec-info"><div class="v-artist">김환기</div><div class="v-title">27-VII-72 #228</div><div class="v-meta">1972, 회화, 264×211cm, oil on cotton</div><div class="auc-row"><span class="lbl">경매사</span><span>K-Auction</span></div><div class="auc-row"><span class="lbl">경매일</span><span>2020.09.16</span></div><div class="auc-row"><span class="lbl">추정가</span><span>KRW 2,000,000,000–KRW 3,000,000,000</span></div><div class="auc-row"><span class="lbl">낙찰가</span><span class="price">KRW 2,800,000,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div></div></div>
 </div>
-</div>
-<div class="rec-card">
-<div class="rec-thumb"></div>
-<div class="rec-info">
-<div class="v-artist">김환기</div>
-<div class="v-title">Universe (05-Ⅳ-71 #200)</div>
-<div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div>
-<div class="auc-row"><span class="lbl">경매사</span><span>Sotheby's Hong Kong</span></div>
-<div class="auc-row"><span class="lbl">경매일</span><span>2015.10.05</span></div>
-<div class="auc-row"><span class="lbl">추정가</span><span>HKD 40,000,000–HKD 60,000,000</span></div>
-<div class="auc-row"><span class="lbl">낙찰가</span><span class="price">HKD 47,200,000 (KRW 6,608,000,000)<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div>
-</div>
-</div>
-<div class="rec-card">
-<div class="rec-thumb"></div>
-<div class="rec-info">
-<div class="v-artist">김환기</div>
-<div class="v-title">Universe (05-Ⅳ-71 #200)</div>
-<div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div>
-<div class="auc-row"><span class="lbl">경매사</span><span>Seoul Auction</span></div>
-<div class="auc-row"><span class="lbl">경매일</span><span>2010.06.15</span></div>
-<div class="auc-row"><span class="lbl">추정가</span><span>KRW 1,800,000,000–KRW 2,500,000,000</span></div>
-<div class="auc-row"><span class="lbl">낙찰가</span><span class="price">KRW 2,200,000,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></span></div>
-</div>
-</div>
-</div>
-<button class="more-btn">경매 기록 더보기</button>
+<div class="rq-bar"><div class="rq-lead">이어서 물어보기</div><div class="rq-list">
+<button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">'Universe (05-Ⅳ-71 #200)' 작품 시세</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
+</div></div>
+<div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== T4: 경매순위 템플릿 (세로 목록, 1위 부각) ========== -->
 <div class="screen-content" id="t4">
-<div class="main-header">
-<div class="qtype">템플릿 · 경매순위</div>
-<h2>경매순위 템플릿</h2>
-<div class="hint">고유기능: 경매 순위 모듈 + 상단 AI 답변. 가로 스와이프 → 한 화면 세로 목록(작은 썸네일), 1위 부각.</div>
-</div>
+<div class="main-header"><div class="qtype">템플릿 · 경매순위</div><h2>경매순위 템플릿</h2><div class="hint">고유기능: 경매 순위 모듈 + 상단 AI 답변. 가로 스와이프 → 세로 목록(최대 10위, 1위 부각, 더보기 없음). 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -749,62 +578,30 @@
 </div>
 <div class="mod-title">경매 낙찰가 순위</div>
 <div class="rank-list">
-<div class="rank-row first">
-<div class="rank-no">1</div>
-<div class="rank-thumb"></div>
-<div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">19-VI-71 #206</div><div class="r-krw">KRW 12,251,400,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></div><div class="r-meta">Christie's New York · 2025.11.17 · USD 8,400,000</div></div>
+<div class="rank-row first"><div class="rank-no">1</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">19-VI-71 #206</div><div class="r-krw">KRW 13,200,000,000<span class="info-icon" data-tooltip="낙찰 시점 환율 적용. 낙찰수수료 포함">ⓘ</span></div><div class="r-meta">Christie's Hong Kong · 2019.11.23 · HKD 88,000,000</div></div></div>
+<div class="rank-row"><div class="rank-no">2</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">9-XII-71 #216</div><div class="r-krw">KRW 7,855,160,000</div><div class="r-meta">Christie's Hong Kong · 2024.09.26 · HKD 55,000,000</div></div></div>
+<div class="rank-row"><div class="rank-no">3</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">Universe (05-Ⅳ-71 #200)</div><div class="r-krw">KRW 6,608,000,000</div><div class="r-meta">Sotheby's Hong Kong · 2015.10.05</div></div></div>
+<div class="rank-row"><div class="rank-no">4</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">3-V-71 #203</div><div class="r-krw">KRW 5,000,000,000</div><div class="r-meta">Seoul Auction · 2024.03.29</div></div></div>
+<div class="rank-row"><div class="rank-no">5</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">16-IV-70 #156</div><div class="r-krw">KRW 4,400,000,000</div><div class="r-meta">Seoul Auction · 2022.05.19</div></div></div>
+<div class="rank-row"><div class="rank-no">6</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">24-VII-71 #208</div><div class="r-krw">KRW 3,900,000,000</div><div class="r-meta">K-Auction · 2023.11.22</div></div></div>
+<div class="rank-row"><div class="rank-no">7</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">Echo 22-X-73 #325</div><div class="r-krw">KRW 3,290,000,000</div><div class="r-meta">Christie's Hong Kong · 2018.05.26</div></div></div>
+<div class="rank-row"><div class="rank-no">8</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">05-IV-71 #199</div><div class="r-krw">KRW 3,200,000,000</div><div class="r-meta">Seoul Auction · 2021.06.15</div></div></div>
+<div class="rank-row"><div class="rank-no">9</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">27-VII-72 #228</div><div class="r-krw">KRW 2,800,000,000</div><div class="r-meta">K-Auction · 2020.09.16</div></div></div>
+<div class="rank-row"><div class="rank-no">10</div><div class="rank-thumb"></div><div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">10-V-70 #163</div><div class="r-krw">KRW 2,400,000,000</div><div class="r-meta">Seoul Auction · 2019.03.12</div></div></div>
 </div>
-<div class="rank-row">
-<div class="rank-no">2</div>
-<div class="rank-thumb"></div>
-<div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">9-XII-71 #216</div><div class="r-krw">KRW 7,855,160,000</div><div class="r-meta">Christie's Hong Kong · 2024.09.26 · HKD 55,000,000</div></div>
-</div>
-<div class="rank-row">
-<div class="rank-no">3</div>
-<div class="rank-thumb"></div>
-<div class="rank-info"><div class="r-artist">김환기</div><div class="r-title">3-V-71 #203</div><div class="r-krw">KRW 5,000,000,000</div><div class="r-meta">Seoul Auction · 2024.03.29</div></div>
-</div>
-</div>
-<button class="more-btn">순위 더보기</button>
-</div>
-</div>
-</div>
-
-<!-- ========== T5: 대표작 템플릿 (세로 목록) ========== -->
-<div class="screen-content" id="t5">
-<div class="main-header">
-<div class="qtype">템플릿 · 대표작</div>
-<h2>대표작 템플릿</h2>
-<div class="hint">고유기능: 작품 모듈 + 상단 AI 답변. 가로 스와이프 → 한 화면 세로 목록(작은 썸네일).</div>
-</div>
-<div class="phone">
-<div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
-<div class="screen">
-<div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
-<div class="user-msg">김환기 대표 작품</div>
-<div class="narrative">
-<p>김환기의 대표 작품입니다. 1970년대 뉴욕 시기 전면점화를 중심으로 소개합니다.</p>
-</div>
-<div class="mod-title">대표 작품</div>
-<div class="vlist">
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">Universe (05-Ⅳ-71 #200)</div><div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">19-VI-71 #206</div><div class="v-meta">1971, 회화, 257×207cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">9-XII-71 #216</div><div class="v-meta">1971, 회화, 254×203cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
-<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">3-V-71 #203</div><div class="v-meta">1971, 회화, 254×203cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
-</div>
-<button class="more-btn">작품 더보기</button>
+<div class="rq-bar"><div class="rq-lead">이어서 물어보기</div><div class="rq-list">
+<button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">1위 '19-VI-71 #206' 작품 시세</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">'19-VI-71 #206' 경매 기록</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
+</div></div>
+<div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== T6: 시리즈 템플릿 (시리즈 1개 + 작품 세로 목록) ========== -->
 <div class="screen-content" id="t6">
-<div class="main-header">
-<div class="qtype">템플릿 · 시리즈</div>
-<h2>시리즈 템플릿</h2>
-<div class="hint">고유기능: 시리즈 모듈(1개) + 작품 모듈을 순차 표시 + 상단 AI 답변. 작품은 한 화면 세로 목록(작은 썸네일).</div>
-</div>
+<div class="main-header"><div class="qtype">템플릿 · 시리즈</div><h2>시리즈 템플릿</h2><div class="hint">고유기능: 시리즈 모듈(1개) + 작품 모듈 순차 + 상단 AI 답변. 작품은 세로 목록(최대 10개, 더보기 없음). 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -815,36 +612,33 @@
 <p>김환기의 대표 시리즈 '<b>전면점화</b>'입니다. 시리즈에 속한 작품도 함께 보여드립니다.</p>
 </div>
 <div class="mod-title">시리즈</div>
-<div class="series-card">
-<div class="s-artist">김환기</div>
-<div class="s-name">전면점화 (Full-surface Dot Paintings)</div>
-<div class="s-period">1970–1974 · 뉴욕 시기</div>
-<div class="s-desc">화면 전체를 점으로 채워 무수한 점이 하나의 우주를 이루는 뉴욕 시기 대표 연작. 한국적 서정과 추상의 정점으로 평가됩니다.</div>
-<div class="s-thumbs">
-<div style="background:linear-gradient(135deg,#1e3a8a,#0c1638);"></div>
-<div style="background:linear-gradient(135deg,#1e40af,#172554);"></div>
-<div style="background:linear-gradient(135deg,#2563eb,#1e3a8a);"></div>
-<div style="background:linear-gradient(135deg,#3b82f6,#1e40af);"></div>
-</div>
-</div>
+<div class="series-card"><div class="s-artist">김환기</div><div class="s-name">전면점화 (Full-surface Dot Paintings)</div><div class="s-period">1970–1974 · 뉴욕 시기</div><div class="s-desc">화면 전체를 점으로 채워 무수한 점이 하나의 우주를 이루는 뉴욕 시기 대표 연작. 한국적 서정과 추상의 정점으로 평가됩니다.</div><div class="s-thumbs"><div style="background:linear-gradient(135deg,#1e3a8a,#0c1638);"></div><div style="background:linear-gradient(135deg,#1e40af,#172554);"></div><div style="background:linear-gradient(135deg,#2563eb,#1e3a8a);"></div><div style="background:linear-gradient(135deg,#3b82f6,#1e40af);"></div></div></div>
 <div class="mod-title">시리즈 속 작품</div>
 <div class="vlist">
 <div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">Universe (05-Ⅳ-71 #200)</div><div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
+<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">Universe (05-Ⅳ-71 #201)</div><div class="v-meta">1971, 회화, 254×254cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
 <div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">19-VI-71 #206</div><div class="v-meta">1971, 회화, 257×207cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
 <div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">9-XII-71 #216</div><div class="v-meta">1971, 회화, 254×203cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
+<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">3-V-71 #203</div><div class="v-meta">1971, 회화, 254×203cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
+<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">16-IV-70 #156</div><div class="v-meta">1970, 회화, 232×177cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
+<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">24-VII-71 #208</div><div class="v-meta">1971, 회화, 248×208cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
+<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">05-IV-71 #199</div><div class="v-meta">1971, 회화, 200×160cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
+<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">Echo 22-X-73 #325</div><div class="v-meta">1973, 회화, 264×208cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
+<div class="vcard" onclick="nav('t2')"><div class="vthumb"></div><div class="vinfo"><div class="v-artist">김환기</div><div class="v-title">27-VII-72 #228</div><div class="v-meta">1972, 회화, 264×211cm, oil on cotton</div></div><span class="v-arrow">›</span></div>
 </div>
-<button class="more-btn">작품 더보기</button>
+<div class="rq-bar"><div class="rq-lead">이어서 물어보기</div><div class="rq-list">
+<button class="rq-btn" onclick="nav('t1')"><span class="rq-tag">시세</span><span class="rq-txt">김환기 작품 시세 — 작품 선택</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t3')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 대표작 경매 기록</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
+</div></div>
+<div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== T7: 화풍 템플릿 (화풍 1개 + 작가 세로 목록) ========== -->
 <div class="screen-content" id="t7">
-<div class="main-header">
-<div class="qtype">템플릿 · 화풍</div>
-<h2>화풍 템플릿</h2>
-<div class="hint">고유기능: 화풍 모듈(1개) + 작가 모듈을 순차 표시 + 상단 AI 답변. 작가는 한 화면 세로 목록.</div>
-</div>
+<div class="main-header"><div class="qtype">템플릿 · 화풍</div><h2>화풍 템플릿</h2><div class="hint">고유기능: 화풍 모듈(1개) + 작가 모듈 순차 + 상단 AI 답변. 작가는 세로 목록(최대 10명, 더보기 없음). 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -856,35 +650,32 @@
 <div class="src">출처 · AI 일반 지식 기반, 최신성 보장 안 됨</div>
 </div>
 <div class="mod-title">화풍</div>
-<div class="style-card">
-<div class="st-name">한국 추상미술 1세대</div>
-<div class="st-period">대한민국 · 1930s–1970s</div>
-<div class="st-desc">서구 추상회화를 한국적 정서·소재와 결합해 독자적 추상을 모색한 1세대 흐름. 점·면·여백의 조형 언어로 한국적 서정을 추상화했습니다.</div>
-<div class="st-thumbs">
-<div style="background:linear-gradient(135deg,#1e3a8a,#0c1638);"></div>
-<div style="background:linear-gradient(135deg,#7c3aed,#3730a3);"></div>
-<div style="background:linear-gradient(135deg,#0ea5e9,#1e40af);"></div>
-<div style="background:linear-gradient(135deg,#a8a29e,#44403c);"></div>
-</div>
-</div>
+<div class="style-card"><div class="st-name">한국 추상미술 1세대</div><div class="st-period">대한민국 · 1930s–1970s</div><div class="st-desc">서구 추상회화를 한국적 정서·소재와 결합해 독자적 추상을 모색한 1세대 흐름. 점·면·여백의 조형 언어로 한국적 서정을 추상화했습니다.</div><div class="st-thumbs"><div style="background:linear-gradient(135deg,#1e3a8a,#0c1638);"></div><div style="background:linear-gradient(135deg,#7c3aed,#3730a3);"></div><div style="background:linear-gradient(135deg,#0ea5e9,#1e40af);"></div><div style="background:linear-gradient(135deg,#a8a29e,#44403c);"></div></div></div>
 <div class="mod-title">같은 화풍의 작가</div>
 <div class="vlist">
-<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">김환기</div><div class="v-meta">1913–1974 · 대한민국</div><div class="v-bio">한국 추상미술 1세대. 한국적 서정을 점·면의 추상으로 구축한 전면점화 작가.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">김환기</div><div class="v-meta">1913–1974 · 대한민국</div><div class="v-bio">한국 추상미술 1세대. 점·면의 추상으로 한국적 서정을 구축한 전면점화 작가.</div></div></div>
 <div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">유영국</div><div class="v-meta">1916–2002 · 대한민국</div><div class="v-bio">산을 모티프로 색면 추상을 전개한 1세대 추상화가.</div></div></div>
-<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">남관</div><div class="v-meta">1911–1990 · 대한민국</div><div class="v-bio">문자·상형을 해체해 동양적 추상을 모색한 작가.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">남관</div><div class="v-meta">1911–1990 · 대한민국</div><div class="v-bio">문자·상형을 해체한 동양적 추상을 모색.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">이응노</div><div class="v-meta">1904–1989 · 대한민국</div><div class="v-bio">문자추상·군상 연작의 서예적 추상.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">장욱진</div><div class="v-meta">1917–1990 · 대한민국</div><div class="v-bio">동심적 소재의 단순·정제된 화면.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">김흥수</div><div class="v-meta">1919–2014 · 대한민국</div><div class="v-bio">구상과 추상을 결합한 하모니즘을 제창.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">권옥연</div><div class="v-meta">1923–2011 · 대한민국</div><div class="v-bio">회청색조의 서정적 추상.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">한묵</div><div class="v-meta">1914–2016 · 대한민국</div><div class="v-bio">기하 추상과 공간 구성의 추상.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">이세득</div><div class="v-meta">1921–2001 · 대한민국</div><div class="v-bio">서정적 추상 회화를 전개.</div></div></div>
+<div class="vcard"><div class="vthumb"></div><div class="vinfo"><div class="v-title">문신</div><div class="v-meta">1922–1995 · 대한민국</div><div class="v-bio">좌우대칭의 생명 추상 조각.</div></div></div>
 </div>
-<button class="more-btn">작가 더보기</button>
+<div class="rq-bar"><div class="rq-lead">이어서 물어보기</div><div class="rq-list">
+<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
+<button class="rq-btn"><span class="rq-tag">작가</span><span class="rq-txt">유영국에 대해 알아보기</span><span class="rq-arrow">›</span></button>
+</div></div>
+<div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
 </div>
 </div>
 
-<!-- ========== T8: 1:1컨설팅 템플릿 (판매 답변 + 상단 AI 답변) ========== -->
 <div class="screen-content" id="t8">
-<div class="main-header">
-<div class="qtype">템플릿 · 1:1컨설팅</div>
-<h2>1:1컨설팅 템플릿</h2>
-<div class="hint">고유기능: 20260617 '작품을 팔고 싶어요' 답변 화면과 동일 + 상단 AI 답변 영역.</div>
-</div>
+<div class="main-header"><div class="qtype">템플릿 · 1:1컨설팅</div><h2>1:1컨설팅 템플릿</h2><div class="hint">고유기능: 판매 안내 + 서비스 가이드 + 판매 신청 CTA + 상단 AI 답변. (하단 재질문 버튼 없음 — 7번 규칙)</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
 <div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
@@ -911,10 +702,7 @@
 </ol>
 </div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
-<div class="cta-consultant">
-<div class="title">작품을 판매하고 싶다면?</div>
-<button>판매 신청</button>
-</div>
+<div class="cta-consultant"><div class="title">작품을 판매하고 싶다면?</div><button>판매 신청</button></div>
 </div>
 </div>
 </div>

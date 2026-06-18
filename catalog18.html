@@ -308,6 +308,188 @@
 <li><strong>정합성 검증</strong>: div 균형(<code>sai_html_balance.py</code>) · 사이드바↔화면 id 일치 · 전환/뒤로가기 동작 (Playwright)</li>
 <li><strong>GitHub Pages 배포</strong>: k2amj2ik.github.io/sai-module-mockup/ (catalog.html·데이터셋 HTML 동반 갱신)</li>
 </ol>
+<hr />
+<h2>9. 개발자 리뷰 반영 변경 (2026-06-18 2차) — 최신 우선</h2>
+<blockquote>
+<p>개발자 리뷰 결과 아래 7개 항목 반영. <strong>본 §9가 §2·§3·§6·§7보다 우선</strong> (충돌 시 §9 채택). 1차 배포본(<code>#q1</code>~<code>#t8</code>, 16화면) 기준에서의 변경.</p>
+</blockquote>
+<h3>9-1. 변경 항목 (확정)</h3>
+<ol>
+<li><strong>진입 화면 통일</strong> — q1·q3·q4·q5·q6·q7을 모두 <strong>AI 답변(narrative) + 재질문 버튼</strong>만으로 구성(q1 순수형, 데이터 미리보기 카드 없음). q2(작품 시세)·q8(작품 판매)는 <strong>즉시이동 유지</strong>.</li>
+<li><strong>대표작 템플릿(t5) 제거</strong> — 화면·사이드바 메뉴·재질문 버튼(대표작) 전부 삭제.</li>
+<li><strong>각 템플릿 하단 재질문 버튼 추가</strong> — t1·t2·t3·t4·t6·t7 하단에 재질문 영역 추가.</li>
+<li><strong>재질문 버튼 최대 5개</strong> (모든 재질문 영역 공통).</li>
+<li><strong>목록 더보기 버튼 제거 + 전체 표시(최대 10개)</strong> — t1·t3·t4·t6·t7 목록.</li>
+<li><strong>재질문 생성 규칙 변경</strong> (아래 9-2).</li>
+<li><strong>t8(1:1컨설팅) 하단 재질문 없음</strong>.</li>
+</ol>
+<h3>9-2. 재질문 버튼 생성 규칙 (확정)</h3>
+<ul>
+<li><strong>기본</strong>: AI가 답변 맥락을 파악해 이용자가 추가로 궁금해할 재질문을 자동 생성.</li>
+<li><strong>작가 1명 + 작품 특정</strong>: 템플릿으로 연결되는 재질문 우선, 특히 <strong>시세작품선택</strong>을 적극 유도.</li>
+<li><strong>작가 여러 명</strong>: 작가 각각을 알아보는 재질문("○○에 대해 알아보기")을 작가당 1개씩 (최대 5명).</li>
+<li><strong>작품 여러 개</strong>: 작품별 시세·경매기록 재질문을 5개 한도로.</li>
+<li>모든 재질문 영역 <strong>최대 5개</strong>.</li>
+</ul>
+<h3>9-3. 화면별 재구성 설계</h3>
+<p><strong>진입 화면 (8종 — q2·q8 외 모두 답변+버튼)</strong></p>
+<table>
+<thead>
+<tr>
+<th>화면</th>
+<th>형태</th>
+<th>재질문 버튼 (≤5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q1 김환기에 대해</td>
+<td>답변+버튼</td>
+<td>시세작품선택 · 경매기록 · 경매순위 · 시리즈 · 화풍</td>
+</tr>
+<tr>
+<td>q2 'Universe' 시세</td>
+<td><strong>즉시 → t1</strong></td>
+<td>(즉시이동, 버튼 없음)</td>
+</tr>
+<tr>
+<td>q3 작가의 작품들</td>
+<td>답변+버튼</td>
+<td>시세작품선택 · 경매기록 · 경매순위 · 시리즈 · 화풍</td>
+</tr>
+<tr>
+<td>q4 파란색 장미</td>
+<td>답변+버튼</td>
+<td>작품별 시세·경매기록 (서로 다른 작품 3점 → 5개 한도)</td>
+</tr>
+<tr>
+<td>q5 단색화 작가</td>
+<td>답변+버튼</td>
+<td>작가별 알아보기 (박서보·정상화·하종현·윤형근·권영우 5명)</td>
+</tr>
+<tr>
+<td>q6 작년 최고가</td>
+<td>답변+버튼</td>
+<td>시세작품선택 · 경매기록 · 경매순위 · 시리즈 · 화풍</td>
+</tr>
+<tr>
+<td>q7 한국 탑12</td>
+<td>답변+버튼</td>
+<td>작가별 알아보기 (순위 상위 5작가)</td>
+</tr>
+<tr>
+<td>q8 작품 판매</td>
+<td><strong>즉시 → t8</strong></td>
+<td>(즉시이동, 버튼 없음)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>템플릿 (대표작 제거 → 7종)</strong></p>
+<table>
+<thead>
+<tr>
+<th>템플릿</th>
+<th>목록(더보기 제거, 최대 10개)</th>
+<th>하단 재질문 (≤5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t1 시세작품선택</td>
+<td>작품 최대 10</td>
+<td>경매순위 · 시리즈 · 화풍 (작품 선택 전이라 시세·기록 제외)</td>
+</tr>
+<tr>
+<td>t2 시세결과</td>
+<td>(단건)</td>
+<td>경매기록 · 경매순위 · 시리즈 · 화풍</td>
+</tr>
+<tr>
+<td>t3 경매기록</td>
+<td>경매기록 최대 10</td>
+<td>시세 · 경매순위 · 시리즈 · 화풍</td>
+</tr>
+<tr>
+<td>t4 경매순위</td>
+<td>순위 최대 10</td>
+<td>1위 작품 시세 · 경매기록 · 시리즈 · 화풍</td>
+</tr>
+<tr>
+<td>~~t5 대표작~~</td>
+<td><strong>제거</strong></td>
+<td><strong>제거</strong></td>
+</tr>
+<tr>
+<td>t6 시리즈</td>
+<td>작품 최대 10</td>
+<td>시세 · 경매기록 · 경매순위 · 화풍</td>
+</tr>
+<tr>
+<td>t7 화풍</td>
+<td>작가 최대 10</td>
+<td>작가 알아보기 · 경매순위 · 시리즈</td>
+</tr>
+<tr>
+<td>t8 1:1컨설팅</td>
+<td>—</td>
+<td><strong>없음 (7번 규칙)</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>화면 수: 진입 8 + 템플릿 7 = <strong>15화면</strong> (기존 16 − 대표작 1).
+하단 재질문은 맥락 기반이며 구현 시 화면별로 최종 큐레이션.</p>
+</blockquote>
+<h3>9-4. 실행계획 (Phase)</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>작업</th>
+<th>대상</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1</strong></td>
+<td>대표작 템플릿(t5) 제거</td>
+<td>t5 screen-content 삭제 · 사이드바 t5 메뉴 삭제 · <code>nav('t5')</code> 2건(q1·q6) 제거</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>진입 화면 재구성</td>
+<td>q1·q3·q4·q5·q6·q7 → 데이터 카드 제거 + narrative + 재질문 버튼(규칙 9-2, ≤5). q3·q7은 즉시이동 → 답변+버튼 전환</td>
+</tr>
+<tr>
+<td><strong>P3</strong></td>
+<td>더보기 제거 + 목록 10개 확장</td>
+<td>t1·t3·t4·t6·t7 <code>more-btn</code> 삭제 + 샘플 데이터 최대 10개로 확장</td>
+</tr>
+<tr>
+<td><strong>P4</strong></td>
+<td>템플릿 하단 재질문 추가</td>
+<td>t1·t2·t3·t4·t6·t7에 <code>rq-bar</code>(≤5) 추가, t8 제외</td>
+</tr>
+<tr>
+<td><strong>P5</strong></td>
+<td>재질문 규칙 정책 문서화</td>
+<td>본 기획서 9-2 + 카탈로그 m-MATCHING 정책 갱신</td>
+</tr>
+<tr>
+<td><strong>P6</strong></td>
+<td>정합성 검증</td>
+<td>div 균형 · 사이드바↔화면 id 일치 · nav 타겟 유효(t5 없음) · 모든 rq-bar ≤5 · <code>more-btn</code>=0 · t8 rq-btn=0 · Playwright 라이브 전환/뒤로가기</td>
+</tr>
+<tr>
+<td><strong>P7</strong></td>
+<td>재배포 + 라이브 전수 테스트</td>
+<td>index.html push → Pages 빌드 → 15화면 deep link 전수 검증 + 스크린샷 시각 검증</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>deep link는 t5 제거로 <code>#t5</code> 무효화(나머지 <code>#q1</code>~<code>#q8</code>·<code>#t1</code>~<code>#t4</code>·<code>#t6</code>~<code>#t8</code> 유지).</p>
+</blockquote>
 </article>
 </body>
 </html>
