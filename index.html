@@ -229,6 +229,17 @@
   .cta-consultant .title { font-size: 14px; font-weight: 600; margin-bottom: 5px; }
   .cta-consultant button { width: 100%; background: #fff; color: #1f2937; border: 1px solid #d1d5db; padding: 11px 24px; border-radius: 7px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 8px; }
   .cta-consultant button:hover { background: #f8f8fa; }
+
+  /* ===== 상단바 (알림·햄버거) — 실제 서비스 화면 ===== */
+  .app-header { justify-content: flex-end; gap: 20px; }
+  .hdr-icon { background: none; border: none; padding: 4px; cursor: pointer; display: flex; align-items: center; line-height: 0; }
+  /* ===== 하단 입력바 — 실제 서비스 화면 ===== */
+  .input-bar { background: #fff; padding: 12px 14px 16px; border-top: 1px solid #f0f0f3; }
+  .input-box { background: #f2f2f5; border-radius: 22px; padding: 14px 16px 11px; }
+  .input-ph { font-size: 14px; color: #9a9aa0; margin-bottom: 12px; }
+  .input-row { display: flex; align-items: center; justify-content: space-between; }
+  .input-left { display: flex; align-items: center; gap: 10px; }
+  .ic-btn, .ic-send { background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; line-height: 0; }
 </style>
 </head>
 <body>
@@ -267,7 +278,7 @@
 <div class="main-header"><div class="qtype">진입 · 작가 정보</div><h2>김환기에 대해 알려줘</h2><div class="hint">AI 답변에 대표작이 언급되어 시세·경매기록 버튼이 함께 노출됩니다. 버튼을 눌러 템플릿으로 이동해 보세요.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="user-msg">김환기에 대해 알려줘</div>
 <div class="narrative">
@@ -285,14 +296,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="q2">
 <div class="main-header"><div class="qtype">진입 · 작품 시세</div><h2>김환기 'Universe' 작품 시세</h2><div class="hint">작품 시세 의도가 파악되어 곧바로 시세작품선택이 표시됩니다. 작품을 누르면 시세결과로 이동합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="user-msg">김환기 Universe 작품 시세 알려줘</div>
 <div class="narrative">
@@ -313,14 +324,14 @@
 </div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="q3">
 <div class="main-header"><div class="qtype">진입 · 작품 정보</div><h2>김환기 작가의 작품들</h2><div class="hint">작가가 특정되어 작품 정보 의도가 파악됐습니다. AI 답변 + 재질문 버튼으로 시세작품선택을 적극 유도합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="user-msg">김환기 작가의 작품들 보여줘</div>
 <div class="narrative">
@@ -336,14 +347,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="q4">
 <div class="main-header"><div class="qtype">진입 · 이미지·모티프 검색</div><h2>파란색 장미가 나오는 작품 알려줘</h2><div class="hint">서로 다른 작품 3점이 검색되어, 작품별 시세·경매기록 재질문이 5개 한도로 생성됩니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="user-msg">파란색 장미가 나오는 작품 알려줘</div>
 <div class="narrative">
@@ -359,14 +370,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="q5">
 <div class="main-header"><div class="qtype">진입 · 작가 큐레이션</div><h2>단색화 작가는 누구야?</h2><div class="hint">작가가 여러 명이므로, 작가 각각을 알아보는 재질문을 작가당 1개씩(최대 5명) 생성합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="user-msg">단색화 작가는 누구야?</div>
 <div class="narrative">
@@ -382,14 +393,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="q6">
 <div class="main-header"><div class="qtype">진입 · 랭킹·시세</div><h2>작년에 제일 비싸게 팔린 작품 뭐야?</h2><div class="hint">언급된 작가·작품 기준으로 시세작품선택을 우선 유도하는 재질문 5개를 생성합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="user-msg">작년에 제일 비싸게 팔린 작품 뭐야?</div>
 <div class="narrative">
@@ -405,14 +416,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="q7">
 <div class="main-header"><div class="qtype">진입 · 경매 순위</div><h2>한국 탑 12 고가 거래 작품</h2><div class="hint">여러 작가의 순위이므로, 순위 상위 작가를 각각 알아보는 재질문 5개를 생성합니다.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="user-msg">한국에서 제일 비싸게 거래된 작품 탑 12</div>
 <div class="narrative">
@@ -428,14 +439,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="q8">
 <div class="main-header"><div class="qtype">진입 · 1:1 컨설팅 (판매)</div><h2>작품을 팔고 싶어요</h2><div class="hint">판매 의도가 파악되어 곧바로 1:1컨설팅 템플릿이 표시됩니다. (컨설팅 화면 하단에는 재질문 버튼이 없습니다.)</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="user-msg">작품을 팔고싶어요.</div>
 <div class="narrative">
@@ -460,14 +471,14 @@
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 <div class="cta-consultant"><div class="title">작품을 판매하고 싶다면?</div><button>판매 신청</button></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="t1">
-<div class="main-header"><div class="qtype">템플릿 · 시세작품선택</div><h2>시세작품선택 템플릿</h2><div class="hint">고유기능: 작품 선택 UI(작가 선택으로 돌아가기 제거). 더보기 없이 전체(최대 10개) 표시. 하단 재질문 ≤5.</div></div>
+<div class="main-header"><div class="qtype">템플릿 · 시세작품선택</div><h2>시세작품선택 템플릿</h2><div class="hint">고유기능: 작품 선택 UI(작가 선택으로 돌아가기 제거). 더보기 없이 전체(최대 10개) 표시. 시세결과로 이어지는 관문이므로 하단 재질문 버튼 없음.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
 <div class="user-msg">김환기 'Universe' 작품 시세</div>
@@ -487,21 +498,16 @@
 <div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">Echo 22-X-73 #325</div><div class="sa-cap">1973, 회화, 264×208cm, oil on cotton</div></div></div>
 <div class="select-card" onclick="nav('t2')"><div class="select-thumb"></div><div class="select-info"><div class="sa-artist">김환기</div><div class="sa-title">27-VII-72 #228</div><div class="sa-cap">1972, 회화, 264×211cm, oil on cotton</div></div></div>
 </div>
-<div class="rq-bar"><div class="rq-lead">다른 정보도 볼까요?</div><div class="rq-list">
-<button class="rq-btn" onclick="nav('t4')"><span class="rq-tag">기록</span><span class="rq-txt">김환기 경매 낙찰가 순위</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t6')"><span class="rq-tag">작품</span><span class="rq-txt">김환기 전면점화 시리즈</span><span class="rq-arrow">›</span></button>
-<button class="rq-btn" onclick="nav('t7')"><span class="rq-tag">화풍</span><span class="rq-txt">한국 추상미술에 대해 알아보기</span><span class="rq-arrow">›</span></button>
-</div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="t2">
 <div class="main-header"><div class="qtype">템플릿 · 시세결과</div><h2>시세결과 템플릿</h2><div class="hint">고유기능: 시세 정보 + 가격추이 그래프 + 유사 작품(더보기 제거) + 상단 AI 답변 + 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
 <div class="narrative">
@@ -525,14 +531,14 @@
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 <div class="cta-consultant"><div class="title">전문가에게 직접 신청하고 싶다면?</div><button>시세 분석 신청</button></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="t3">
 <div class="main-header"><div class="qtype">템플릿 · 경매기록</div><h2>경매기록 템플릿</h2><div class="hint">고유기능: 경매 기록 모듈 + 상단 AI 답변. 가로 스와이프 → 세로 목록(최대 10건, 더보기 없음). 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
 <div class="user-msg">김환기 'Universe (05-Ⅳ-71 #200)' 최근 경매 기록</div>
@@ -561,14 +567,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="t4">
 <div class="main-header"><div class="qtype">템플릿 · 경매순위</div><h2>경매순위 템플릿</h2><div class="hint">고유기능: 경매 순위 모듈 + 상단 AI 답변. 가로 스와이프 → 세로 목록(최대 10위, 1위 부각, 더보기 없음). 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
 <div class="user-msg">김환기 경매 낙찰가 순위</div>
@@ -597,14 +603,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="t6">
 <div class="main-header"><div class="qtype">템플릿 · 시리즈</div><h2>시리즈 템플릿</h2><div class="hint">고유기능: 시리즈 모듈(1개) + 작품 모듈 순차 + 상단 AI 답변. 작품은 세로 목록(최대 10개, 더보기 없음). 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
 <div class="user-msg">김환기 전면점화 시리즈</div>
@@ -634,14 +640,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="t7">
 <div class="main-header"><div class="qtype">템플릿 · 화풍</div><h2>화풍 템플릿</h2><div class="hint">고유기능: 화풍 모듈(1개) + 작가 모듈 순차 + 상단 AI 답변. 작가는 세로 목록(최대 10명, 더보기 없음). 하단 재질문 ≤5.</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
 <div class="user-msg">한국 추상미술에 대해 알아보기</div>
@@ -671,14 +677,14 @@
 </div></div>
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 <div class="screen-content" id="t8">
 <div class="main-header"><div class="qtype">템플릿 · 1:1컨설팅</div><h2>1:1컨설팅 템플릿</h2><div class="hint">고유기능: 판매 안내 + 서비스 가이드 + 판매 신청 CTA + 상단 AI 답변. (하단 재질문 버튼 없음 — 7번 규칙)</div></div>
 <div class="phone">
 <div class="status-bar"><span>9:41</span><span>•••</span></div>
-<div class="app-header"><div class="logo"></div><span>Seoul Auction Intelligence</span></div>
+<div class="app-header"><button class="hdr-icon" title="알림" aria-label="알림"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button><button class="hdr-icon" title="메뉴" aria-label="메뉴"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button></div>
 <div class="screen">
 <div class="tmpl-back hidden" onclick="back()"><span class="bk-arrow">←</span> 뒤로</div>
 <div class="user-msg">작품을 팔고 싶어요.</div>
@@ -704,7 +710,7 @@
 <div class="feedback-actions"><span title="복사">⧉</span><span title="좋아요">👍</span><span title="아쉬워요">👎</span><span title="새로고침">↻</span></div>
 <div class="cta-consultant"><div class="title">작품을 판매하고 싶다면?</div><button>판매 신청</button></div>
 </div>
-</div>
+<div class="input-bar"><div class="input-box"><div class="input-ph">미술품 정보와 시세를 확인해보세요.</div><div class="input-row"><div class="input-left"><button class="ic-btn" title="사진 추가" aria-label="사진 추가"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><line x1="14" y1="9.5" x2="14" y2="18.5" stroke-linecap="round"/><line x1="9.5" y1="14" x2="18.5" y2="14" stroke-linecap="round"/></svg></button><button class="ic-btn" title="질문 샘플" aria-label="질문 샘플"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#8a8a90" stroke-width="1.5"><rect x="6.5" y="5" width="15" height="18" rx="2.5"/><line x1="10" y1="10" x2="18" y2="10" stroke-linecap="round"/><line x1="10" y1="14" x2="18" y2="14" stroke-linecap="round"/><line x1="10" y1="18" x2="15" y2="18" stroke-linecap="round"/></svg></button></div><button class="ic-send" title="전송" aria-label="전송"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14.5" stroke="#8a8a90" stroke-width="1.5"/><path d="M17 23.5 V11 M11.5 16.5 L17 11 L22.5 16.5" stroke="#555" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div></div>
 </div>
 
 </main>
