@@ -336,6 +336,9 @@
   .pdf-cta:hover { background: #eff4ff; }
   .rpt-pdf { margin-bottom: 14px; }
   .t9-pdf { margin-top: 10px; }
+  /* 최근 연도 열 강조 (미술시장 리포트 표 t10·t11) */
+  #t10 .rpt-table th:last-child, #t10 .rpt-table td:last-child, #t11 .rpt-table th:last-child, #t11 .rpt-table td:last-child { background: #fff3f2; }
+  #t10 .rpt-table thead th:last-child, #t11 .rpt-table thead th:last-child { color: #b8312f; font-weight: 800; }
 </style>
 </head>
 <body>
@@ -961,13 +964,13 @@
 <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;"><div style="font-size:11px;font-weight:800;color:#b8312f;">$59.6B</div><div style="width:64%;height:81px;display:flex;flex-direction:column;border-radius:5px 5px 0 0;overflow:hidden;margin-top:3px;"><div style="flex:0 0 68px;background:linear-gradient(180deg,#60a5fa,#2563eb);"></div><div style="flex:0 0 13px;background:#f59e0b;"></div></div><div style="font-size:10px;color:#b8312f;font-weight:700;margin-top:5px;">2025</div></div>
 </div>
 <table class="rpt-table"><thead><tr><th class="hname">지표</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead><tbody>
-<tr><td class="hname">세계 규모(US$B)</td><td><div class="won2">68.1</div></td><td><div class="won2">65.2</div></td><td><div class="won2">57.5</div></td><td><div class="won2">59.6</div></td></tr>
-<tr><td class="hname">세계 규모(₩조)</td><td><div class="won2">98.3</div></td><td><div class="won2">94.1</div></td><td><div class="won2">83.0</div></td><td><div class="won2">86.1</div></td></tr>
+<tr><td class="hname">세계 규모(십억 달러)</td><td><div class="won2">68.1</div></td><td><div class="won2">65.2</div></td><td><div class="won2">57.5</div></td><td><div class="won2">59.6</div></td></tr>
+<tr><td class="hname">세계 규모(조 원)</td><td><div class="won2">98.3</div></td><td><div class="won2">94.1</div></td><td><div class="won2">83.0</div></td><td><div class="won2">86.1</div></td></tr>
 <tr><td class="hname">전년비</td><td>+3%</td><td>-4%</td><td>-12%</td><td>+4%</td></tr>
-<tr><td class="hname">온라인(US$B)</td><td><div class="won2">11.0</div><div class="hkd2">16%</div></td><td><div class="won2">11.8</div><div class="hkd2">18%</div></td><td><div class="won2">10.5</div><div class="hkd2">18%</div></td><td><div class="won2">9.2</div><div class="hkd2">15%</div></td></tr>
+<tr><td class="hname">온라인(십억 달러)</td><td><div class="won2">11.0</div><div class="hkd2">16%</div></td><td><div class="won2">11.8</div><div class="hkd2">18%</div></td><td><div class="won2">10.5</div><div class="hkd2">18%</div></td><td><div class="won2">9.2</div><div class="hkd2">15%</div></td></tr>
 </tbody></table>
 <div style="font-size:11px;color:#b8312f;font-weight:700;margin:2px 0 4px;">적용 환율 · US$1 = ₩1,444 (2025.12.31 기준)</div>
-<div class="rpt-note">세계 규모 = US$ 10억 / ₩조(2025년 말 환율 일괄 적용) · 온라인 아래 값 = 세계 대비 비중 %. 출처 · The Art Basel &amp; UBS Art Market Report 2023–2026, Arts Economics</div></div>
+<div class="rpt-note">세계 규모 = 십억 달러 / 조 원(2025년 말 환율 일괄 적용) · 온라인 아래 값 = 세계 대비 비중 %. 출처 · The Art Basel &amp; UBS Art Market Report 2023–2026, Arts Economics</div></div>
 <div class="rpt-sec"><div class="rs-h">미국·영국·중국 점유율 (2022–2025)</div>
 <div style="font-size:11px;color:#888;margin-bottom:3px;">단위 % (세계 시장 대비)</div>
 <div style="display:flex;gap:12px;font-size:10px;color:#666;margin-bottom:4px;"><span><span style="display:inline-block;width:9px;height:9px;background:#2563eb;border-radius:50%;vertical-align:middle;"></span> 미국</span><span><span style="display:inline-block;width:9px;height:9px;background:#16a34a;border-radius:50%;vertical-align:middle;"></span> 영국</span><span><span style="display:inline-block;width:9px;height:9px;background:#ea580c;border-radius:50%;vertical-align:middle;"></span> 중국</span></div>
@@ -994,7 +997,7 @@
 <tr><td class="hname">영국</td><td><div class="won2">11.9</div><div class="hkd2">18%</div></td><td><div class="won2">10.9</div><div class="hkd2">17%</div></td><td><div class="won2">10.4</div><div class="hkd2">18%</div></td><td><div class="won2">10.5</div><div class="hkd2">18%</div></td></tr>
 <tr><td class="hname">중국</td><td><div class="won2">11.2</div><div class="hkd2">17%</div></td><td><div class="won2">12.2</div><div class="hkd2">19%</div></td><td><div class="won2">8.4</div><div class="hkd2">15%</div></td><td><div class="won2">8.5</div><div class="hkd2">14%</div></td></tr>
 </tbody></table>
-<div class="rpt-note">규모 = US$ 10억(위) · 세계 대비 점유율 %(아래). 2023년 중국(19%)이 영국(17%)을 추월해 2위. 출처 · The Art Basel &amp; UBS Art Market Report 2023–2026, Arts Economics</div></div>
+<div class="rpt-note">규모 = 십억 달러(위) · 세계 대비 점유율 %(아래). 2023년 중국(19%)이 영국(17%)을 추월해 2위. 출처 · The Art Basel &amp; UBS Art Market Report 2023–2026, Arts Economics</div></div>
 <div class="rpt-sec"><div class="rs-h">한눈에 보는 미술시장</div>
 <ul class="rpt-bullets airy"><li>2년 연속 위축 후 <b>반등</b> — 세계 미술시장 +4%, 약 US$59.6B</li><li>공개경매(<b>+9%</b>)가 회복 주도 · 딜러 +2% · 경매 프라이빗세일 -5%</li><li>거래량 4,150만 건(+2%)으로 대체로 안정</li><li>미국·영국·중국이 세계 <b>76%</b> — 미국 44%(1위)·영국 18%·중국 14%</li><li>미국 US$26.0B(+5%), 초고가(US$10M 초과) 작품 거래 약 40% 증가</li><li>관세 등 정책 불확실성이 주요 우려 — 미국 미술품 수입 +13%(US$9.9B)</li><li><b>한국 +6%</b> 성장 · 일본 -1% · 프랑스 4위 US$4.5B(+9%)</li><li>온라인 US$9.2B = 전체 15%, 2019년 이후 최저 (정점 2020년 25%)</li><li>부문 구조: 경매 약 42% · 딜러/갤러리 58% · 아트페어가 딜러 매출의 35%</li></ul></div>
 </div>
