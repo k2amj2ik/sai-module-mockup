@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SAI 미술시장 보고서 검색(RAG) — 결과 카드 목업 (2026-08-07)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif; background: #f5f5f7; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; padding: 28px; }
+  .head { max-width: 460px; margin: 0 auto 18px; }
+  .head h1 { font-size: 20px; }
+  .head .sub { font-size: 13px; color: #888; margin-top: 6px; line-height: 1.6; }
+  .head .legend { font-size: 12px; color: #555; background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 9px 12px; margin-top: 12px; }
+  .phone { width: 430px; margin: 0 auto; background: #fff; border-radius: 28px; border: 10px solid #1a1a1a; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+  .status-bar { height: 36px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; font-size: 13px; font-weight: 600; }
+  .app-header { padding: 14px 18px; border-bottom: 1px solid #f0f0f3; display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
+  .hdr-icon { color: #222; }
+  .screen { padding: 16px; min-height: 640px; background: #fafafb; }
+  /* 검색바 */
+  .search-bar { display: flex; align-items: center; gap: 9px; background: #fff; border: 1.5px solid #2563eb; border-radius: 24px; padding: 11px 16px; box-shadow: 0 2px 8px rgba(37,99,235,0.08); }
+  .search-bar .mag { font-size: 16px; }
+  .search-bar .q { font-size: 15px; font-weight: 600; color: #1a1a1a; }
+  .result-lead { font-size: 12px; color: #888; margin: 16px 2px 10px; font-weight: 600; }
+  /* 결과 카드 */
+  .rcard { background: #fff; border: 1px solid #ececf0; border-radius: 14px; padding: 14px; margin-bottom: 11px; }
+  .rcard .rc-title { font-size: 14px; font-weight: 800; color: #0f172a; }
+  .rcard .rc-val { font-size: 16px; font-weight: 800; color: #b8312f; margin-top: 6px; }
+  .rcard .rc-snip { font-size: 13px; color: #444; line-height: 1.65; margin-top: 6px; }
+  .rcard .rc-src { font-size: 11px; color: #999; margin-top: 9px; padding-top: 8px; border-top: 1px dashed #ececf0; }
+  .rcard .rc-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; padding: 8px 13px; border: 1.5px solid #2563eb; border-radius: 10px; color: #1d4ed8; font-size: 12.5px; font-weight: 700; text-decoration: none; }
+  .rcard .rc-link:hover { background: #eff4ff; }
+  .rcard .tag { display: inline-block; font-size: 10px; font-weight: 700; border-radius: 5px; padding: 2px 7px; margin-bottom: 8px; }
+  .tag.cur { background: #ecfdf5; color: #047857; }
+  .tag.tail { background: #f1f5f9; color: #475569; }
+  .foot-note { font-size: 11px; color: #aaa; margin-top: 14px; line-height: 1.6; }
+  /* 입력바 */
+  .input-bar { background: #fff; padding: 12px 14px 16px; border-top: 1px solid #f0f0f3; }
+  .input-box { background: #f2f2f5; border-radius: 22px; padding: 13px 16px; font-size: 14px; color: #9a9aa0; }
+</style>
+</head>
+<body>
+<div class="head">
+<h1>SAI 미술시장 보고서 검색 (RAG) — 결과 카드 목업</h1>
+<div class="sub">검색엔진형 UX 시안 (2026-08-07). 뒷단은 예술경영지원센터 보고서 <b>전량 색인</b>, 앞단은 <b>검색 결과 카드</b>(요약 + 출처 + 원본 링크). 값은 큐레이션 헤드라인만 직접 노출, 그 외는 스니펫+링크로 안내 → 출력이 '재현'이 아니라 '안내'.</div>
+<div class="legend"><b>카드 유형</b> &nbsp;<span style="color:#047857;font-weight:700;">■ 큐레이션</span> 값 직접 노출 &nbsp; <span style="color:#475569;font-weight:700;">■ 롱테일</span> 스니펫+링크</div>
+</div>
+
+<div class="phone">
+<div class="status-bar"><span>9:41</span><span>•••</span></div>
+<div class="app-header"><span class="hdr-icon">🔔</span><span class="hdr-icon">☰</span></div>
+<div class="screen">
+<div class="search-bar"><span class="mag">🔎</span><span class="q">2024 화랑 서양화 판매 비중</span></div>
+<div class="result-lead">예술경영지원센터 미술시장조사에서 관련 자료 3건</div>
+
+<div class="rcard">
+<span class="tag cur">큐레이션</span>
+<div class="rc-title">화랑 장르별 작품 판매 (금액 기준)</div>
+<div class="rc-val">서양화(회화) 77.4% — 최다</div>
+<div class="rc-snip">조각·설치 11.8%, 동양화 7.7% 순. 화랑 판매액은 서양화에 크게 집중.</div>
+<div class="rc-src">출처 · 예술경영지원센터 2025 미술시장조사 (2024 기준) · p.58, 표 3-1-29</div>
+<a class="rc-link" href="https://www.gokams.or.kr/05_know/data_view.aspx?Idx=1261&amp;flag=4&amp;page=1&amp;txtKeyword=&amp;ddlKeyfield=T" target="_blank" rel="noopener">↗ 원본 보고서 보기</a>
+</div>
+
+<div class="rcard">
+<span class="tag tail">롱테일</span>
+<div class="rc-title">화랑 판매방법별 작품 판매 현황</div>
+<div class="rc-snip">전시 판매·아트페어 참가 판매·온라인 등 판매 경로별 비중을 다룬 표가 있습니다. 세부 수치는 원본에서 확인하세요.</div>
+<div class="rc-src">출처 · 예술경영지원센터 2025 미술시장조사 (2024 기준) · p.58, 표 3-1-25</div>
+<a class="rc-link" href="https://www.gokams.or.kr/05_know/data_view.aspx?Idx=1261&amp;flag=4&amp;page=1&amp;txtKeyword=&amp;ddlKeyfield=T" target="_blank" rel="noopener">↗ 원본 보고서 보기</a>
+</div>
+
+<div class="rcard">
+<span class="tag tail">롱테일</span>
+<div class="rc-title">화랑 고객별 작품 판매 현황</div>
+<div class="rc-snip">개인·기업·해외 컬렉터 등 고객 유형별 판매 비중 자료. 장르×고객 교차는 원본 참고.</div>
+<div class="rc-src">출처 · 예술경영지원센터 2025 미술시장조사 (2024 기준) · p.58, 표 3-1-27</div>
+<a class="rc-link" href="https://www.gokams.or.kr/05_know/data_view.aspx?Idx=1261&amp;flag=4&amp;page=1&amp;txtKeyword=&amp;ddlKeyfield=T" target="_blank" rel="noopener">↗ 원본 보고서 보기</a>
+</div>
+
+<div class="foot-note">· 뒷단: 표(정형)는 구조화 DB 조회, 해설(비정형)은 벡터 검색 — 하이브리드.<br>· 원본 링크는 발행처 공식 페이지로 이동(PDF 자체 호스팅·딥링크 안 함).</div>
+</div>
+<div class="input-bar"><div class="input-box">미술시장 보고서에 무엇이든 물어보세요.</div></div>
+</div>
+</body>
+</html>
